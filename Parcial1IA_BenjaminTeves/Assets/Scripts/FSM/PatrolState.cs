@@ -20,10 +20,13 @@ public class PatrolState : States
     {
         Patrol();
         
-        if(_hunter.stamina <= 0)
+        if(_hunter.stamine <= 0)
+        {
+            _hunter.fullStamine = false;
             fsm.ChangeState(HunterStates.Idle);
-        if (_hunter.CHECKAGENT == true && _hunter.stamina >= 0)
-            fsm.ChangeState(HunterStates.Chase);
+        }
+
+        if (_hunter.CHECKAGENT == true && _hunter.stamine >= 0 && _hunter.fullStamine == true) fsm.ChangeState(HunterStates.Chase);
     }
 
     public void Patrol()
@@ -38,10 +41,9 @@ public class PatrolState : States
 
         _hunter.transform.position += _hunter.VELOCITY * Time.deltaTime;
         _hunter.transform.right = _hunter.VELOCITY;
-        _hunter.stamina -= 1 * Time.deltaTime;
+        _hunter.stamine -= 1 * Time.deltaTime;
     }
 
     public override void OnExit()
-    {
-    }
+    { }
 }

@@ -22,11 +22,13 @@ public class ChaseState : States
 
     public override void Update()
     {
-        if (_hunter.stamina <= 0)
+        if(_hunter.stamine <= 0)
+        {
+            _hunter.fullStamine = false;
             fsm.ChangeState(HunterStates.Idle);
+        }
 
-        if (_hunter.CHECKAGENT == false && _hunter.stamina > 0)
-            fsm.ChangeState(HunterStates.Patrol);
+        if (_hunter.CHECKAGENT == true && _hunter.stamine > 0) fsm.ChangeState(HunterStates.Patrol);
 
         _hunter.AddForce(Persuit());
     }
@@ -38,7 +40,7 @@ public class ChaseState : States
         Vector3 desired = Vector3.zero;
         desired.Normalize();
         desired *= maxSpeed;
-        _hunter.stamina -= 1 * Time.deltaTime;
+        _hunter.stamine -= 1 * Time.deltaTime;
         _hunter.transform.right = desired;
 
         foreach (var agents in GameManager.instance.allBoids)
@@ -56,6 +58,5 @@ public class ChaseState : States
     }
 
     public override void OnExit()
-    {
-    }
+    { }
 }

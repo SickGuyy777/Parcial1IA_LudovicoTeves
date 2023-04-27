@@ -6,11 +6,12 @@ public class Hunter : MonoBehaviour
 {
     FiniteStateMachine _fsm;
 
-    public float stamina;
-    public int currentWay;
+    public float stamine;
     public float wayRadius;
     public float viewRadius;
     public Transform[] waypoints;
+    public bool fullStamine;
+    [HideInInspector] public int currentWay;
 
     Vector3 _velocity;
     bool _checkAgent;

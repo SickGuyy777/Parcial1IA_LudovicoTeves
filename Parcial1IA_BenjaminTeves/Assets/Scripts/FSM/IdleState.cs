@@ -18,13 +18,22 @@ public class IdleState : States
 
     public override void Update()
     {
-        _hunter.stamina += 1 * Time.deltaTime;
+        _hunter.AddForce(ChargeStamine());
+        if (_hunter.CHECKAGENT == true && _hunter.stamine > 0 && _hunter.fullStamine == true) fsm.ChangeState(HunterStates.Chase);
+    }
 
-        if (_hunter.stamina >= 60)
-            fsm.ChangeState(HunterStates.Patrol);
+    public Vector3 ChargeStamine()
+    {
+        _hunter.stamine += 1f * Time.deltaTime;
+        Vector3 desired = default;
+        if(_hunter.stamine >= 60)
+        {
+            _hunter.fullStamine = true;
+            if (_hunter.stamine > 0 && _hunter.fullStamine == true && _hunter.CHECKAGENT == false) fsm.ChangeState(HunterStates.Patrol);
+        }
+        return _hunter.Seek(desired);
     }
 
     public override void OnExit()
-    {
-    }
+    { }
 }
