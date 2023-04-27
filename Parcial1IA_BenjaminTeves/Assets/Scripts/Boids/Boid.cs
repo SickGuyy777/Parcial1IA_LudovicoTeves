@@ -197,7 +197,7 @@ public class Boid : MonoBehaviour
         desired.Normalize();
         desired *= maxSpeed;
 
-        
+
         float dist = desired.magnitude;
         if (dist <= viewRadius){
             isArriving = true;
