@@ -22,11 +22,12 @@ public class IdleState : States
 
         if (_hunter.stamina >= 60)
             fsm.ChangeState(HunterStates.Patrol);
+        if (_hunter.CHECKAGENT == true && _hunter.stamina > 0)
+            fsm.ChangeState(HunterStates.Chase);
 
     }
 
     public override void OnExit()
     {
-
     }
 }

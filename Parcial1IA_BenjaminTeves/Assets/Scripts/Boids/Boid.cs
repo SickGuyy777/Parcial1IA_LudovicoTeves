@@ -143,7 +143,7 @@ public class Boid : MonoBehaviour
         transform.position = GameManager.instance.ChangeObjPosition(transform.position);
     }
 
-    void AddForce(Vector3 force)
+    protected void AddForce(Vector3 force)
     {
         _velocity = Vector3.ClampMagnitude(_velocity + force, maxSpeed);
     }
