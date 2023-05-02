@@ -11,6 +11,7 @@ public class Hunter : MonoBehaviour
     public float viewRadius;
     public Transform[] waypoints;
     public bool fullStamine;
+    
     [HideInInspector] public int currentWay;
 
     Vector3 _velocity;
@@ -22,6 +23,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] float _maxSpeed;
     [SerializeField] [Range(0, 0.15f)] float _maxForce;
     [SerializeField] LayerMask _agentLayer;
+    [SerializeField] LayerMask _obstaclesLayer;
 
     private void Start()
     {
@@ -36,7 +38,26 @@ public class Hunter : MonoBehaviour
     private void Update()
     {
         _checkAgent = Physics.CheckSphere(transform.position, viewRadius, _agentLayer);
-        _fsm.Update();       
+        _fsm.Update();
+    }
+
+    public Vector3 ObstacleAvoidance()
+    {
+        Vector3 desired = default;
+
+        if (Physics.Raycast(transform.position + transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
+        {
+            Debug.Log("A");
+            desired = -transform.right;
+        }
+        else if(Physics.Raycast(transform.position - transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
+        {
+            Debug.Log("B");
+            desired = transform.right;
+        }
+        else return desired;
+
+        return Seek(desired.normalized * _maxSpeed);
     }
 
     public Vector3 Seek(Vector3 targetPos)
@@ -58,6 +79,13 @@ public class Hunter : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
+
+        Gizmos.color = Color.yellow;
+        Vector3 origin1 = transform.position + transform.forward / 2;
+        Vector3 origin2 = transform.position - transform.forward / 2;
+
+        Gizmos.DrawLine(origin1, origin1 + transform.right * viewRadius);
+        Gizmos.DrawLine(origin2, origin2 + transform.right * viewRadius);
     }
 }
 

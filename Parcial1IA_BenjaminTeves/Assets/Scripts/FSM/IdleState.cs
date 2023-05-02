@@ -5,14 +5,17 @@ using UnityEngine;
 public class IdleState : States
 {
     Hunter _hunter;
+    Renderer _rend;
 
     public IdleState(Hunter hunter)
     {
         _hunter = hunter;
+        _rend = _hunter.GetComponent<Renderer>();
     }
 
     public override void OnEnter()
     {
+        _rend.material.color = Color.yellow;
         Debug.Log("Entro a Idle");
     }
 

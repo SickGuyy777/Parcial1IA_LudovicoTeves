@@ -5,19 +5,23 @@ using UnityEngine;
 public class PatrolState : States
 {
     Hunter _hunter;
+    Renderer _rend;
 
     public PatrolState(Hunter hunter)
     {
         _hunter = hunter;
+        _rend = _hunter.GetComponent<Renderer>();
     }
 
     public override void OnEnter()
     {
+        _rend.material.color = Color.cyan;
         Debug.Log("Entro en Patrol");
     }
 
     public override void Update()
     {
+        _hunter.AddForce(_hunter.ObstacleAvoidance());
         Patrol();
         
         if(_hunter.stamine <= 0)
@@ -31,6 +35,7 @@ public class PatrolState : States
 
     public void Patrol()
     {
+        
         _hunter.AddForce(_hunter.Seek(_hunter.waypoints[_hunter.currentWay].position));
 
         if (Vector3.Distance(_hunter.waypoints[_hunter.currentWay].position, _hunter.transform.position) <= _hunter.wayRadius)

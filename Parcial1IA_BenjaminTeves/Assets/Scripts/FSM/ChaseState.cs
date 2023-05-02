@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChaseState : States
 {
     Hunter _hunter;
+    Renderer _rend;
 
     public float maxSpeed;
     [Range(0f, 0.1f)]
@@ -13,16 +14,19 @@ public class ChaseState : States
     public ChaseState (Hunter hunter)
     {
         _hunter = hunter;
+        _rend = _hunter.GetComponent<Renderer>();
     }
 
     public override void OnEnter()
     {
+        _rend.material.color = Color.red;
         Debug.Log("Entro en Chase");
     }
 
     public override void Update()
     {
-        if(_hunter.stamine <= 0)
+        _hunter.AddForce(_hunter.ObstacleAvoidance());
+        if (_hunter.stamine <= 0)
         {
             _hunter.fullStamine = false;
             fsm.ChangeState(HunterStates.Idle);
