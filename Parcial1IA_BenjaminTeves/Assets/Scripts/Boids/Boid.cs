@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-    
+
     private Vector3 _velocity;
     public float maxSpeed;
     [Range(0f, 0.5f)]
@@ -22,14 +22,18 @@ public class Boid : MonoBehaviour
 
     [Header("Arrive")]
     public float arriveRadius;
-    public bool isArriving;
+
 
     public Transform seekTarget;
 
     public Transform fleeTarget;
 
 
-    
+    public float killDistance = 1f;
+
+    private Vector3 velocidad;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,35 @@ public class Boid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject food = GameObject.FindGameObjectWithTag("Food");
+
+        float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
+
+        Vector3 direccion = seekTarget.position - transform.position;
+
+
+
+        if (distanciaHunter <= killDistance)
+        {
+            gameObject.SetActive(false);
+        }
+
+        float distanciaFood = Vector3.Distance(transform.position, food.transform.position);
+        if (distanciaFood < 5)
+        {
+            AddForce(Arrive(food.transform.position));
+        }
+
+        if (distanciaFood < 0.1f)
+        {
+            Destroy(food);
+        }
+
+
+
+
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+
         AddForce(Separation() * separationWeight);
         AddForce(Alignment() * alignmentWeight);
         AddForce(Cohesion() * cohesionWeight);
@@ -52,24 +85,14 @@ public class Boid : MonoBehaviour
         transform.right = _velocity;
         CheckBounds();
 
-       if (isArriving)
-        {
-            AddForce(Arrive(seekTarget.position));
-            transform.position += _velocity * Time.deltaTime;
-            transform.right = _velocity;
-            return;
-        }
 
-        Vector3 desired = seekTarget.position - transform.position;
-        float dist = desired.magnitude;
-        if (dist <= viewRadius)
-        {
-            AddForce(Seek(seekTarget.position));
-        }
+
+
+
 
         if ((fleeTarget.position - transform.position).magnitude <= viewRadius)
         {
-         AddForce(Flee(fleeTarget.position));
+            AddForce(Flee(fleeTarget.position));
         }
     }
 
@@ -144,14 +167,14 @@ public class Boid : MonoBehaviour
         _velocity = Vector3.ClampMagnitude(_velocity + force, maxSpeed);
     }
 
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
         //Gizmos.color = Color.red;
         //Gizmos.DrawWireSphere(transform.position, separationRadius);
-        
+
     }
 
     public Vector3 GetVelocity()
@@ -161,27 +184,14 @@ public class Boid : MonoBehaviour
 
     Vector3 Arrive(Vector3 targetPos)
     {
-        Vector3 desired = targetPos - transform.position;
-        float dist = desired.magnitude;
-        if (dist <= arriveRadius)
-        {
-            desired.Normalize();
-            desired *= maxSpeed * (dist / arriveRadius);
+        float dist = Vector3.Distance(targetPos, transform.position);
+        if (dist > arriveRadius)
+            return Seek(targetPos);
 
-            GameObject.Destroy(seekTarget.gameObject);
+        Vector3 desired = (targetPos - transform.position).normalized;
+        desired *= ((dist / arriveRadius) * maxSpeed); //arriveRadius = 100% / dist
 
-            isArriving = false;
-
-        }
-        else
-        {
-            desired.Normalize();
-            desired *= maxSpeed;
-        }
-
-        //Steering
-        Vector3 steering = desired - _velocity;
-        steering = Vector3.ClampMagnitude(steering, maxForce);
+        Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, maxForce);
 
         return steering;
     }
@@ -193,11 +203,6 @@ public class Boid : MonoBehaviour
         desired.Normalize();
         desired *= maxSpeed;
 
-
-        float dist = desired.magnitude;
-        if (dist <= viewRadius){
-            isArriving = true;
-        }
 
         //Steering
         Vector3 steering = desired - _velocity;

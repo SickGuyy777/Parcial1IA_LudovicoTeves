@@ -11,7 +11,7 @@ public class ChaseState : States
     [Range(0f, 0.1f)]
     public float maxForce;
 
-    public ChaseState (Hunter hunter)
+    public ChaseState(Hunter hunter)
     {
         _hunter = hunter;
         _rend = _hunter.GetComponent<Renderer>();
@@ -33,8 +33,8 @@ public class ChaseState : States
         }
 
         if (_hunter.CHECKAGENT == false && _hunter.stamine >= 1) fsm.ChangeState(HunterStates.Patrol);
-
-        _hunter.AddForce(Persuit());
+        else
+            _hunter.AddForce(Persuit());
     }
 
     Vector3 Persuit()

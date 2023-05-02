@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-   
-    
 
-    // Update is called once per frame
 
-    void OnCollisionEnter(Collision collision) 
+    public float distanciaMinima = 0.1f;
+
+    private void FixedUpdate()
     {
-        
+        GameObject agente = GameObject.FindGameObjectWithTag("Boid");
 
-        if  (collision.gameObject.tag == "Boid")
+        if (agente != null)
         {
-            Destroy(gameObject);
+            Vector3 direccion = agente.transform.position - transform.position;
+            float distancia = direccion.magnitude;
 
-            
+            if (distancia < distanciaMinima)
+            {
+                Destroy(gameObject);
+            }
         }
-
-        
     }
-    
+
 }
