@@ -24,11 +24,7 @@ public class PatrolState : States
         _hunter.AddForce(_hunter.ObstacleAvoidance());
         Patrol();
         
-        if(_hunter.stamine <= 0)
-        {
-            _hunter.fullStamine = false;
-            fsm.ChangeState(HunterStates.Idle);
-        }
+        if(_hunter.stamine <= 0) fsm.ChangeState(HunterStates.Idle);
 
         if (_hunter.CHECKAGENT == true && _hunter.stamine >= 0 && _hunter.fullStamine == true) fsm.ChangeState(HunterStates.Chase);
     }

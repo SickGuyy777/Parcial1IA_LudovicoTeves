@@ -32,7 +32,7 @@ public class ChaseState : States
             fsm.ChangeState(HunterStates.Idle);
         }
 
-        if (_hunter.CHECKAGENT == true && _hunter.stamine > 0) fsm.ChangeState(HunterStates.Patrol);
+        if (_hunter.CHECKAGENT == false && _hunter.stamine >= 1) fsm.ChangeState(HunterStates.Patrol);
 
         _hunter.AddForce(Persuit());
     }

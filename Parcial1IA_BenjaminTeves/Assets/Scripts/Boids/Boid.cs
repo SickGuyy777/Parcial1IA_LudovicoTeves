@@ -49,14 +49,14 @@ public class Boid : MonoBehaviour
         AddForce(Cohesion() * cohesionWeight);
 
         transform.position += _velocity * Time.deltaTime;
-        transform.forward = _velocity;
+        transform.right = _velocity;
         CheckBounds();
 
        if (isArriving)
         {
             AddForce(Arrive(seekTarget.position));
             transform.position += _velocity * Time.deltaTime;
-            transform.forward = _velocity;
+            transform.right = _velocity;
             return;
         }
 
@@ -71,10 +71,6 @@ public class Boid : MonoBehaviour
         {
          AddForce(Flee(fleeTarget.position));
         }
-
-        transform.position += _velocity * Time.deltaTime;
-        transform.forward = _velocity;
-        
     }
 
     Vector3 Separation()
