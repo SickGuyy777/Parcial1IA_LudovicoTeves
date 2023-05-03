@@ -364,6 +364,7 @@
 "Assets/Scripts/FSM/States.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Hunter.cs"
+"Assets/Scripts/prueba.cs"
 -langversion:9.0
 
 /deterministic
