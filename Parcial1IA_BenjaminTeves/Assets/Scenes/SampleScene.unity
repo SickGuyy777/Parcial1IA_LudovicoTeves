@@ -236,9 +236,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -453,9 +453,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -573,9 +573,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -737,9 +737,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -932,7 +932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496053981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.69, y: 0, z: -8.88}
+  m_LocalPosition: {x: -4.34, y: 0, z: -8.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -952,7 +952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e72b1b5f4a05a419935b2cd5a4fe78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamine: 60
+  stamine: 0
+  fullStamine: 45
   wayRadius: 0.5
   viewRadius: 3
   waypoints:
@@ -960,10 +961,9 @@ MonoBehaviour:
   - {fileID: 448858451}
   - {fileID: 531396970}
   - {fileID: 772659460}
-  fullStamine: 0
   currentWay: 0
   _maxSpeed: 5
-  _maxForce: 0.0818
+  _maxForce: 0.05
   _agentLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1180,9 +1180,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -1491,9 +1491,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -1708,9 +1708,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -2069,9 +2069,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -2189,9 +2189,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -2231,9 +2231,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -2659,9 +2659,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -3021,9 +3021,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
@@ -3176,9 +3176,9 @@ MonoBehaviour:
   maxSpeed: 3
   maxForce: 0.1
   viewRadius: 2
-  separationWeight: 1.5
-  alignmentWeight: 1
-  cohesionWeight: 1
+  separationWeight: 0.75
+  alignmentWeight: 1.5
+  cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}

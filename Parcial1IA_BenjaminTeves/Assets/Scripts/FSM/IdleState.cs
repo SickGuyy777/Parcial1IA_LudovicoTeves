@@ -16,25 +16,13 @@ public class IdleState : States
     public override void OnEnter()
     {
         _rend.material.color = Color.yellow;
-        Debug.Log("Entro a Idle");
     }
 
     public override void Update()
     {
-        _hunter.AddForce(ChargeStamine());
-        if (_hunter.CHECKAGENT == true && _hunter.stamine > 0 && _hunter.fullStamine == true) fsm.ChangeState(HunterStates.Chase);
-    }
-
-    public Vector3 ChargeStamine()
-    {
         _hunter.stamine += 1f * Time.deltaTime;
-        Vector3 desired = default;
-        if(_hunter.stamine >= 60)
-        {
-            _hunter.fullStamine = true;
-            if (_hunter.stamine > 0 && _hunter.fullStamine == true && _hunter.CHECKAGENT == false) fsm.ChangeState(HunterStates.Patrol);
-        }
-        return _hunter.Seek(desired);
+        if (_hunter.CHECKAGENT == true && _hunter.stamine >= _hunter.fullStamine) fsm.ChangeState(HunterStates.Chase);
+        if (_hunter.CHECKAGENT == false && _hunter.stamine >= _hunter.fullStamine) fsm.ChangeState(HunterStates.Patrol);
     }
 
     public override void OnExit()

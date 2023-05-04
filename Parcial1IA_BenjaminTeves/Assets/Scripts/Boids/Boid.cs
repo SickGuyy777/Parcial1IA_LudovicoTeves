@@ -28,7 +28,6 @@ public class Boid : MonoBehaviour
 
     public Transform fleeTarget;
 
-
     public float killDistance = 1f;
 
     private Vector3 velocidad;
@@ -54,8 +53,6 @@ public class Boid : MonoBehaviour
 
         Vector3 direccion = seekTarget.position - transform.position;
 
-
-
         if (distanciaHunter <= killDistance)
         {
             gameObject.SetActive(false);
@@ -72,9 +69,6 @@ public class Boid : MonoBehaviour
             Destroy(food);
         }
 
-
-
-
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
         AddForce(Separation() * separationWeight);
@@ -84,11 +78,6 @@ public class Boid : MonoBehaviour
         transform.position += _velocity * Time.deltaTime;
         transform.right = _velocity;
         CheckBounds();
-
-
-
-
-
 
         if ((fleeTarget.position - transform.position).magnitude <= viewRadius)
         {
@@ -167,14 +156,14 @@ public class Boid : MonoBehaviour
         _velocity = Vector3.ClampMagnitude(_velocity + force, maxSpeed);
     }
 
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, separationRadius);
-
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, separationWeight);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, alignmentWeight);
     }
 
     public Vector3 GetVelocity()
@@ -216,6 +205,4 @@ public class Boid : MonoBehaviour
     {
         return -Seek(targetPos);
     }
-
-
 }

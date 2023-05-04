@@ -20,7 +20,6 @@ public class ChaseState : States
     public override void OnEnter()
     {
         _rend.material.color = Color.red;
-        Debug.Log("Entro en Chase");
     }
 
     public override void Update()
@@ -28,7 +27,7 @@ public class ChaseState : States
         _hunter.AddForce(_hunter.ObstacleAvoidance());
         if (_hunter.stamine <= 0)
         {
-            _hunter.fullStamine = false;
+            //_hunter.fullStamine = false;
             fsm.ChangeState(HunterStates.Idle);
         }
 

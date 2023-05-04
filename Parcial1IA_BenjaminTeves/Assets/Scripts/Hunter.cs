@@ -7,10 +7,10 @@ public class Hunter : MonoBehaviour
     FiniteStateMachine _fsm;
 
     public float stamine;
+    public float fullStamine;
     public float wayRadius;
     public float viewRadius;
     public Transform[] waypoints;
-    public bool fullStamine;
     
     [HideInInspector] public int currentWay;
 
@@ -33,6 +33,8 @@ public class Hunter : MonoBehaviour
         _fsm.AddState(HunterStates.Chase, new ChaseState(this));
 
         _fsm.ChangeState(HunterStates.Idle);
+
+        stamine = fullStamine;
     }
 
     private void Update()

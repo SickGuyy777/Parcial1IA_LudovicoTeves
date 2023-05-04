@@ -16,7 +16,6 @@ public class PatrolState : States
     public override void OnEnter()
     {
         _rend.material.color = Color.cyan;
-        Debug.Log("Entro en Patrol");
     }
 
     public override void Update()
@@ -26,7 +25,7 @@ public class PatrolState : States
         
         if(_hunter.stamine <= 0) fsm.ChangeState(HunterStates.Idle);
 
-        if (_hunter.CHECKAGENT == true && _hunter.stamine >= 0 && _hunter.fullStamine == true) fsm.ChangeState(HunterStates.Chase);
+        if (_hunter.CHECKAGENT == true && _hunter.stamine >= 0) fsm.ChangeState(HunterStates.Chase);
     }
 
     public void Patrol()
