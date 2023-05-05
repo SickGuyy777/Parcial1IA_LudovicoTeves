@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
 
     public float boundWidth;
     public float boundHeight;
 
     public List<Boid> allBoids = new List<Boid>();
+    public List<Hunter> myHunter = new List<Hunter>();
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
 
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour
     {
         if (!allBoids.Contains(b))
             allBoids.Add(b);
+    }
+
+    public void AddHunter(Hunter h)
+    {
+        if (!myHunter.Contains(h)) myHunter.Add(h);
     }
 
     public Vector3 ChangeObjPosition(Vector3 pos)
@@ -32,8 +38,6 @@ public class GameManager : MonoBehaviour
 
         return pos;
     }
-
-
 
     private void OnDrawGizmos()
     {

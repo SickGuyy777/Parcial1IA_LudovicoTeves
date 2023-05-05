@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-
     private Vector3 _velocity;
     public float maxSpeed;
     [Range(0f, 0.5f)]
@@ -22,22 +21,18 @@ public class Boid : MonoBehaviour
     [Header("Arrive")]
     public float arriveRadius;
 
-
     public Transform seekTarget;
 
     public Transform fleeTarget;
 
     public float killDistance = 1f;
 
-    private Vector3 velocidad;
-
     public FoodSpawner foodManager;
     public List<GameObject> foodList;
 
-    // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.AddBoid(this);
+        GameManager.Instance.AddBoid(this);
 
         foodList = foodManager.foodList;
 
@@ -47,7 +42,6 @@ public class Boid : MonoBehaviour
         AddForce(randomDir);
     }
 
-    // Update is called once per frame
     void Update()
     {
         float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
@@ -83,9 +77,8 @@ public class Boid : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
-
         //Lo ideal seria utilizar OverlapSphere y conseguir los componentes
-        AddForce(Separation(GameManager.instance.allBoids, separationRadius) * separationWeight);
+        AddForce(Separation(GameManager.Instance.allBoids, separationRadius) * separationWeight);
         AddForce(Alignment() * alignmentWeight);
         AddForce(Cohesion() * cohesionWeight);
 
@@ -93,10 +86,7 @@ public class Boid : MonoBehaviour
         transform.right = _velocity;
         CheckBounds();
 
-        if ((fleeTarget.position - transform.position).magnitude <= viewRadius)
-        {
-            AddForce(Flee(fleeTarget.position));
-        }
+        AddForce(Evade());
     }
     Vector3 Separation(List<Boid> boids)
     {
@@ -122,7 +112,7 @@ public class Boid : MonoBehaviour
     {
         Vector3 desired = Vector3.zero;
         int count = 0;
-        foreach (var item in GameManager.instance.allBoids)
+        foreach (var item in GameManager.Instance.allBoids)
         {
             if (item == this) continue;
             if (Vector3.Distance(transform.position, item.transform.position) <= viewRadius)
@@ -140,7 +130,7 @@ public class Boid : MonoBehaviour
     {
         Vector3 desired = Vector3.zero;
         int count = 0;
-        foreach (var item in GameManager.instance.allBoids)
+        foreach (var item in GameManager.Instance.allBoids)
         {
             if (item == this) continue;
 
@@ -165,7 +155,7 @@ public class Boid : MonoBehaviour
 
     void CheckBounds()
     {
-        transform.position = GameManager.instance.ChangeObjPosition(transform.position);
+        transform.position = GameManager.Instance.ChangeObjPosition(transform.position);
     }
 
     protected void AddForce(Vector3 force)
@@ -191,35 +181,40 @@ public class Boid : MonoBehaviour
     Vector3 Arrive(Vector3 targetPos)
     {
         float dist = Vector3.Distance(targetPos, transform.position);
-        if (dist > arriveRadius)
-            return Seek(targetPos);
+        if (dist > arriveRadius) return Seek(targetPos);
 
         Vector3 desired = (targetPos - transform.position).normalized;
         desired *= ((dist / arriveRadius) * maxSpeed); //arriveRadius = 100% / dist
 
         Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, maxForce);
-
         return steering;
     }
 
     Vector3 Seek(Vector3 targetPos)
     {
-        //Action-Selection
         Vector3 desired = targetPos - transform.position;
         desired.Normalize();
         desired *= maxSpeed;
 
-
-        //Steering
         Vector3 steering = desired - _velocity;
-
         steering = Vector3.ClampMagnitude(steering, maxForce);
-
         return steering;
     }
 
-    Vector3 Flee(Vector3 targetPos)
+    public Vector3 Evade()
     {
-        return -Seek(targetPos);
+        Vector3 desired = Vector3.zero;
+        foreach (var hunt in GameManager.Instance.myHunter)
+        {
+            Vector3 distHunt = hunt.transform.position - transform.position;
+            if (hunt == this) continue;
+
+            if(distHunt.magnitude <= viewRadius)
+            {
+                Vector3 nextPos = hunt.transform.position + hunt.VELOCITY * Time.deltaTime;
+                desired = nextPos - transform.position;
+            }
+        }
+        return CalculateSteering(desired);
     }
 }

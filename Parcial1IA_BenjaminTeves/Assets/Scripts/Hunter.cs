@@ -17,13 +17,13 @@ public class Hunter : MonoBehaviour
     Vector3 _velocity;
     bool _checkAgent;
 
-    public bool CHECKAGENT { get => _checkAgent; }
-    public Vector3 VELOCITY { get => _velocity; }
-
     [SerializeField] float _maxSpeed;
     [SerializeField] [Range(0, 0.15f)] float _maxForce;
     [SerializeField] LayerMask _agentLayer;
     [SerializeField] LayerMask _obstaclesLayer;
+
+    public bool CHECKAGENT { get => _checkAgent; }
+    public Vector3 VELOCITY { get => _velocity; }
 
     private void Start()
     {
@@ -79,7 +79,7 @@ public class Hunter : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(waypoints[currentWay].position, wayRadius);
 
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
 
         Gizmos.color = Color.yellow;

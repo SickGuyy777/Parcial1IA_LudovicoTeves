@@ -45,8 +45,8 @@ public class ChaseState : States
         desired *= maxSpeed;
         _hunter.stamine -= 1 * Time.deltaTime;
         _hunter.transform.right = desired;
-
-        foreach (var agents in GameManager.instance.allBoids)
+    
+        foreach (var agents in GameManager.Instance.allBoids)
         {
             Vector3 distBoids = agents.transform.position - _hunter.transform.position;
             if (distBoids.magnitude <= _hunter.viewRadius)
@@ -56,7 +56,7 @@ public class ChaseState : States
                 _hunter.transform.position += desired * Time.deltaTime;
             }
         }
-
+    
         return _hunter.Seek(desired);
     }
 
