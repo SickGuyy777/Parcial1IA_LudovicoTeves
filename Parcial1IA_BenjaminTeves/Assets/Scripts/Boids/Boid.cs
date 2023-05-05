@@ -12,13 +12,12 @@ public class Boid : MonoBehaviour
 
     public float viewRadius;
 
-    //Weights
-    [Range(0f, 2f)]
-    public float separationWeight;
-    [Range(0f, 2f)]
-    public float alignmentWeight;
-    [Range(0f, 2f)]
-    public float cohesionWeight;
+    public float separationRadius;
+
+    [Header("Weights")]
+    [Range(0f, 3f)] public float separationWeight;
+    [Range(0f, 3f)] public float alignmentWeight;
+    [Range(0f, 3f)] public float cohesionWeight;
 
     [Header("Arrive")]
     public float arriveRadius;
@@ -32,11 +31,15 @@ public class Boid : MonoBehaviour
 
     private Vector3 velocidad;
 
+    public FoodSpawner foodManager;
+    public List<GameObject> foodList;
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.AddBoid(this);
+
+        foodList = foodManager.foodList;
 
         Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
         randomDir.Normalize();
@@ -47,31 +50,42 @@ public class Boid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject food = GameObject.FindGameObjectWithTag("Food");
-
         float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
-
-        Vector3 direccion = seekTarget.position - transform.position;
 
         if (distanciaHunter <= killDistance)
         {
             gameObject.SetActive(false);
         }
 
-        float distanciaFood = Vector3.Distance(transform.position, food.transform.position);
-        if (distanciaFood < 5)
+        GameObject closestFood = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (GameObject food in foodList)
         {
-            AddForce(Arrive(food.transform.position));
+            float distance = Vector3.Distance(transform.position, food.transform.position);
+            if (distance <= viewRadius && distance < closestDistance)
+            {
+                closestFood = food;
+                closestDistance = distance;
+            }
         }
 
-        if (distanciaFood < 0.1f)
+        if (closestFood != null)
         {
-            Destroy(food);
+            AddForce(Arrive(closestFood.transform.position));
+        }
+
+        if (closestFood != null && Vector3.Distance(transform.position, closestFood.transform.position) < 0.5)
+        {
+            foodList.Remove(closestFood);
+            Destroy(closestFood);
         }
 
         transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
-        AddForce(Separation() * separationWeight);
+
+        //Lo ideal seria utilizar OverlapSphere y conseguir los componentes
+        AddForce(Separation(GameManager.instance.allBoids, separationRadius) * separationWeight);
         AddForce(Alignment() * alignmentWeight);
         AddForce(Cohesion() * cohesionWeight);
 
@@ -84,20 +98,23 @@ public class Boid : MonoBehaviour
             AddForce(Flee(fleeTarget.position));
         }
     }
+    Vector3 Separation(List<Boid> boids)
+    {
+        return Separation(boids, viewRadius);
+    }
 
-    Vector3 Separation()
+    Vector3 Separation(List<Boid> boids, float radius)
     {
         Vector3 desired = Vector3.zero;
-        foreach (Boid boid in GameManager.instance.allBoids)
+        foreach (var item in boids)
         {
-            Vector3 dist = boid.transform.position - transform.position;
-            if (dist.magnitude <= viewRadius)
-            {
-                desired += dist;
-            }
+            if (item == this || Vector3.Distance(item.transform.position, transform.position) > radius) continue;
+
+            desired += item.transform.position - transform.position;
         }
-        if (desired == Vector3.zero) return desired; //si no hay nadie adentro
-        desired *= -1;
+        if (desired == Vector3.zero) return desired;
+        desired = -desired.normalized * maxSpeed;
+
         return CalculateSteering(desired);
     }
 

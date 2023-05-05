@@ -8,6 +8,8 @@ public class FoodSpawner : MonoBehaviour
 
     public GameObject agents;
 
+    public List<GameObject> foodList;
+
 
 
     public int cantidad = 15;
@@ -25,8 +27,11 @@ public class FoodSpawner : MonoBehaviour
         {
             Vector3 randomSpawnPosition = new Vector3(Random.Range(-14, 16), 0, Random.Range(-9, 10));
 
-            Instantiate(foodPrefab, randomSpawnPosition, Quaternion.identity);
+            GameObject newFood = Instantiate(foodPrefab, randomSpawnPosition, Quaternion.identity);
+            foodList.Add(newFood);
+
             cantidad--;
+
         }
 
         while (cantidad >= 1);

@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188085276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,15 +234,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &188496727
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223907045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.5, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -451,15 +454,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &253210619
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253210619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -571,15 +577,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &297944071
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402054558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,15 +744,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &448858450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623694060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1178,15 +1190,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821650859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1489,15 +1504,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList:
+  - {fileID: 0}
 --- !u!1 &822182345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914873288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1706,15 +1725,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057327030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2067,15 +2089,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &1180777590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180777590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2187,15 +2212,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &1295532940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,15 +2257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!135 &1295532942
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2309,7 +2340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295532940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2574,7 +2605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480312931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2657,15 +2688,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &1497102861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 5047352426952979829, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   agents: {fileID: 297944071}
+  foodList: []
   cantidad: 15
 --- !u!4 &1497102863
 Transform:
@@ -2936,7 +2971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649451316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3019,15 +3054,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &1707331168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845209892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.4999995, y: 0, z: 10.1}
   m_LocalScale: {x: 0.83323056, y: 0.83323056, z: 0.83323056}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3174,15 +3212,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  maxForce: 0.1
+  maxForce: 0.26
   viewRadius: 2
-  separationWeight: 0.75
+  separationRadius: 0.52
+  separationWeight: 2.76
   alignmentWeight: 1.5
   cohesionWeight: 1.5
   arriveRadius: 3
   seekTarget: {fileID: 5047352426952979825, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
   fleeTarget: {fileID: 496053986}
   killDistance: 1
+  foodManager: {fileID: 1497102862}
+  foodList: []
 --- !u!1 &2063040828
 GameObject:
   m_ObjectHideFlags: 0
