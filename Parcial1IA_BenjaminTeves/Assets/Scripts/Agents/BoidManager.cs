@@ -8,6 +8,7 @@ public class BoidManager : MonoBehaviour
     public float boundWidth;
 
     public HashSet<BoidAgent> allBoids = new HashSet<BoidAgent>();
+    public HashSet<Hunter> myHunt = new HashSet<Hunter>();
 
     public static BoidManager Instance;
 
@@ -31,6 +32,12 @@ public class BoidManager : MonoBehaviour
     {
         if (!allBoids.Contains(b))
             allBoids.Add(b);
+    }
+
+    public void AddHunt(Hunter h)
+    {
+        if (!myHunt.Contains(h))
+            myHunt.Add(h);
     }
 
     void OnDrawGizmos()

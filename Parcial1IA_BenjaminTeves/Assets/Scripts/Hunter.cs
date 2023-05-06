@@ -74,6 +74,11 @@ public class Hunter : MonoBehaviour
         _velocity = Vector3.ClampMagnitude(_velocity + force, _maxSpeed);
     }
 
+    public Vector3 MyVelocity()
+    {
+        return _velocity;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

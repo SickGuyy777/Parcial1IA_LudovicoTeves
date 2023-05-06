@@ -27,6 +27,7 @@ public class BoidAgent : SteeringAgent
         Vector3 force = obstacleForce == Vector3.zero ? CalculateSteering(transform.forward * _maxSpeed) : obstacleForce;
         AddForce(force);
 
+        //AddForce(Evade());
         Move();
     }
 
@@ -96,9 +97,25 @@ public class BoidAgent : SteeringAgent
             desired += item.transform.position - transform.position;
         }
         if (desired == Vector3.zero) return desired;
-
         desired = -desired.normalized * _maxSpeed;
 
+        return CalculateSteering(desired);
+    }
+
+    public Vector3 Evade()
+    {
+        Vector3 desired = Vector3.zero;
+        foreach (var hunt in BoidManager.Instance.myHunt)
+        {
+            Vector3 distHunt = hunt.transform.position - transform.position;
+            if (hunt == this) continue;
+
+            if(distHunt.magnitude <= viewRadius)
+            {
+                Vector3 nextPos = hunt.transform.position + hunt.MyVelocity() * Time.deltaTime;
+                desired = nextPos - transform.position;
+            }
+        }
         return CalculateSteering(desired);
     }
 
