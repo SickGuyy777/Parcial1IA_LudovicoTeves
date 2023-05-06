@@ -1421,7 +1421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728625294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.0199997, y: 0, z: 2.7700005}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1444,10 +1444,15 @@ MonoBehaviour:
   _maxForce: 0.1
   separationRadius: 0.75
   viewRadius: 2
+  arriveRadius: 1.27
   _obsLayer:
     serializedVersion: 2
     m_Bits: 128
   _separationWeight: 2
+  foodList: []
+  foodManager: {fileID: 1497102862}
+  fleeTarget: {fileID: 496053986}
+  killDistance: 1.01
 --- !u!135 &728625297
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1539,7 +1544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770628662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.0199997, y: 0, z: 2.7700005}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1625,10 +1630,15 @@ MonoBehaviour:
   _maxForce: 0.1
   separationRadius: 0.75
   viewRadius: 2
+  arriveRadius: 1.27
   _obsLayer:
     serializedVersion: 2
     m_Bits: 128
   _separationWeight: 2
+  foodList: []
+  foodManager: {fileID: 1497102862}
+  fleeTarget: {fileID: 496053986}
+  killDistance: 1.01
 --- !u!1 &772659459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047891192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.02, y: 0, z: 2.77}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2363,10 +2373,15 @@ MonoBehaviour:
   _maxForce: 0.1
   separationRadius: 0.75
   viewRadius: 2
+  arriveRadius: 1.27
   _obsLayer:
     serializedVersion: 2
     m_Bits: 128
   _separationWeight: 2
+  foodList: []
+  foodManager: {fileID: 1497102862}
+  fleeTarget: {fileID: 496053986}
+  killDistance: 1.01
 --- !u!135 &1047891195
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3238,7 +3253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476204254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.0199997, y: 0, z: 2.7700005}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3261,10 +3276,15 @@ MonoBehaviour:
   _maxForce: 0.1
   separationRadius: 0.75
   viewRadius: 2
+  arriveRadius: 1.27
   _obsLayer:
     serializedVersion: 2
     m_Bits: 128
   _separationWeight: 2
+  foodList: []
+  foodManager: {fileID: 1497102862}
+  fleeTarget: {fileID: 496053986}
+  killDistance: 1.01
 --- !u!135 &1476204257
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4100,7 +4120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122751516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.0199997, y: 0, z: 2.7700005}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4123,10 +4143,15 @@ MonoBehaviour:
   _maxForce: 0.1
   separationRadius: 0.75
   viewRadius: 2
+  arriveRadius: 1.27
   _obsLayer:
     serializedVersion: 2
     m_Bits: 128
   _separationWeight: 2
+  foodList: []
+  foodManager: {fileID: 1497102862}
+  fleeTarget: {fileID: 496053986}
+  killDistance: 1.01
 --- !u!135 &2122751519
 SphereCollider:
   m_ObjectHideFlags: 0

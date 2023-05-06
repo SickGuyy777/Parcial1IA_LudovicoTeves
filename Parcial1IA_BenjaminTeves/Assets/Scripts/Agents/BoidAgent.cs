@@ -7,15 +7,25 @@ public class BoidAgent : SteeringAgent
     public float separationRadius;
     public float viewRadius;
 
+    public float arriveRadius;
+
     [SerializeField] LayerMask _obsLayer;
 
-    [Range(0f, 10f)] [SerializeField] float _separationWeight;
+    [Range(0f, 10f)][SerializeField] float _separationWeight;
+
+    public List<GameObject> foodList;
+
+    public FoodSpawner foodManager;
+    public Transform fleeTarget;
+
+    public float killDistance;
 
     private void Start()
     {
         Vector3 randomDir = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
         AddForce(randomDir.normalized * _maxSpeed);
         BoidManager.Instance.AddBoid(this);
+        foodList = foodManager.foodList;
     }
 
     private void Update()
@@ -29,6 +39,37 @@ public class BoidAgent : SteeringAgent
 
         //AddForce(Evade());
         Move();
+
+        float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
+
+        if (distanciaHunter <= killDistance)
+        {
+            gameObject.SetActive(false);
+        }
+
+        GameObject closestFood = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (GameObject food in foodList)
+        {
+            float distance = Vector3.Distance(transform.position, food.transform.position);
+            if (distance <= viewRadius && distance < closestDistance)
+            {
+                closestFood = food;
+                closestDistance = distance;
+            }
+        }
+
+        if (closestFood != null)
+        {
+            AddForce(Arrive(closestFood.transform.position));
+        }
+
+        if (closestFood != null && Vector3.Distance(transform.position, closestFood.transform.position) < 0.5)
+        {
+            foodList.Remove(closestFood);
+            Destroy(closestFood);
+        }
     }
 
     void Flocking()
@@ -36,6 +77,18 @@ public class BoidAgent : SteeringAgent
         AddForce(Separation(BoidManager.Instance.allBoids) * _separationWeight);
         AddForce(Alignment(BoidManager.Instance.allBoids));
         AddForce(Cohesion(BoidManager.Instance.allBoids));
+    }
+
+    Vector3 Arrive(Vector3 targetPos)
+    {
+        float dist = Vector3.Distance(targetPos, transform.position);
+        if (dist > arriveRadius) return Seek(targetPos);
+
+        Vector3 desired = (targetPos - transform.position).normalized;
+        desired *= ((dist / arriveRadius) * _maxSpeed); //arriveRadius = 100% / dist
+
+        Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, _maxForce);
+        return steering;
     }
 
     Vector3 ObstacleAvoidance()
@@ -57,7 +110,7 @@ public class BoidAgent : SteeringAgent
         int count = 0;
         foreach (BoidAgent item in boids)
         {
-            if(Vector3.Distance (item.transform.position, transform.position) <= viewRadius)
+            if (Vector3.Distance(item.transform.position, transform.position) <= viewRadius)
             {
                 desired += item._velocity;
                 count++;
@@ -110,7 +163,7 @@ public class BoidAgent : SteeringAgent
             Vector3 distHunt = hunt.transform.position - transform.position;
             if (hunt == this) continue;
 
-            if(distHunt.magnitude <= viewRadius)
+            if (distHunt.magnitude <= viewRadius)
             {
                 Vector3 nextPos = hunt.transform.position + hunt.MyVelocity() * Time.deltaTime;
                 desired = nextPos - transform.position;
