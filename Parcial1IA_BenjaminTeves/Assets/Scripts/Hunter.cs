@@ -11,14 +11,14 @@ public class Hunter : MonoBehaviour
     public float wayRadius;
     public float viewRadius;
     public Transform[] waypoints;
-    
+
     [HideInInspector] public int currentWay;
 
-    Vector3 _velocity;
+    public static Vector3 _velocity;
     bool _checkAgent;
 
     [SerializeField] float _maxSpeed;
-    [SerializeField] [Range(0, 0.15f)] float _maxForce;
+    [SerializeField][Range(0, 0.15f)] float _maxForce;
     [SerializeField] LayerMask _agentLayer;
     [SerializeField] LayerMask _obstaclesLayer;
 
@@ -52,7 +52,7 @@ public class Hunter : MonoBehaviour
             Debug.Log("A");
             desired = -transform.right;
         }
-        else if(Physics.Raycast(transform.position - transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
+        else if (Physics.Raycast(transform.position - transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
         {
             Debug.Log("B");
             desired = transform.right;

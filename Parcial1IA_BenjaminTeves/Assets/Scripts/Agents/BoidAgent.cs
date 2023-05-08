@@ -37,7 +37,8 @@ public class BoidAgent : SteeringAgent
         Vector3 force = obstacleForce == Vector3.zero ? CalculateSteering(transform.forward * _maxSpeed) : obstacleForce;
         AddForce(force);
 
-        //AddForce(Evade());
+
+
         Move();
 
         float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
@@ -45,6 +46,11 @@ public class BoidAgent : SteeringAgent
         if (distanciaHunter <= killDistance)
         {
             gameObject.SetActive(false);
+        }
+
+        if (distanciaHunter <= viewRadius)
+        {
+            Evade();
         }
 
         GameObject closestFood = null;
@@ -87,7 +93,7 @@ public class BoidAgent : SteeringAgent
         Vector3 desired = (targetPos - transform.position).normalized;
         desired *= ((dist / arriveRadius) * _maxSpeed); //arriveRadius = 100% / dist
 
-        Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, _maxForce);
+        Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, _maxForce * 1.5f);
         return steering;
     }
 
@@ -155,21 +161,18 @@ public class BoidAgent : SteeringAgent
         return CalculateSteering(desired);
     }
 
-    public Vector3 Evade()
+    void Evade()
     {
-        Vector3 desired = Vector3.zero;
-        foreach (var hunt in BoidManager.Instance.myHunt)
+        if (fleeTarget != null)
         {
-            Vector3 distHunt = hunt.transform.position - transform.position;
-            if (hunt == this) continue;
-
-            if (distHunt.magnitude <= viewRadius)
-            {
-                Vector3 nextPos = hunt.transform.position + hunt.MyVelocity() * Time.deltaTime;
-                desired = nextPos - transform.position;
-            }
+            Vector3 hunterVelocity = Hunter._velocity;
+            Vector3 toTarget = fleeTarget.position - transform.position;
+            float distance = toTarget.magnitude;
+            float time = distance / _maxSpeed;
+            Vector3 targetPos = fleeTarget.position + hunterVelocity * time;
+            Vector3 desired = (transform.position - targetPos).normalized * _maxSpeed;
+            AddForce(desired - _velocity * 2);
         }
-        return CalculateSteering(desired);
     }
 
     private void OnDrawGizmos()
