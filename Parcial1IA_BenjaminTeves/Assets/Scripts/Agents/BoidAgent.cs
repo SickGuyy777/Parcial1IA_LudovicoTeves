@@ -37,8 +37,6 @@ public class BoidAgent : SteeringAgent
         Vector3 force = obstacleForce == Vector3.zero ? CalculateSteering(transform.forward * _maxSpeed) : obstacleForce;
         AddForce(force);
 
-
-
         Move();
 
         float distanciaHunter = Vector3.Distance(transform.position, fleeTarget.position);
@@ -174,6 +172,8 @@ public class BoidAgent : SteeringAgent
             AddForce(desired - _velocity * 2);
         }
     }
+
+    public Vector3 MyVelocity() { return _velocity; }
 
     private void OnDrawGizmos()
     {

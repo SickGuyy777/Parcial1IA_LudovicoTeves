@@ -23,6 +23,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] LayerMask _obstaclesLayer;
 
     public bool CHECKAGENT { get => _checkAgent; }
+    public float MAXSPEED { get => _maxSpeed; }
     public Vector3 VELOCITY { get => _velocity; }
 
     private void Start()
@@ -45,21 +46,25 @@ public class Hunter : MonoBehaviour
 
     public Vector3 ObstacleAvoidance()
     {
-        Vector3 desired = default;
+        Vector3 desired = _velocity.normalized * _maxSpeed;
 
-        if (Physics.Raycast(transform.position + transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
+        if (Physics.Raycast(transform.position + transform.right * 0.5f, transform.forward, out RaycastHit hit, viewRadius, _obstaclesLayer))
         {
-            Debug.Log("A");
-            desired = -transform.right;
+            Vector3 avoidanceDir = Vector3.Cross(transform.up, hit.normal);
+            desired += avoidanceDir * _maxSpeed;
         }
-        else if (Physics.Raycast(transform.position - transform.right / 2, _velocity, viewRadius, _obstaclesLayer))
-        {
-            Debug.Log("B");
-            desired = transform.right;
-        }
-        else return desired;
 
-        return Seek(desired.normalized * _maxSpeed);
+        else if (Physics.Raycast(transform.position - transform.right * 0.5f, transform.forward, out hit, viewRadius, _obstaclesLayer))
+        {
+            Vector3 avoidanceDir = Vector3.Cross(transform.up, hit.normal);
+            desired -= avoidanceDir * _maxSpeed;
+        }
+
+        Vector3 steering = desired - _velocity;
+        steering = Vector3.ClampMagnitude(steering, _maxForce);
+        AddForce(steering);
+
+        return steering;
     }
 
     public Vector3 Seek(Vector3 targetPos)

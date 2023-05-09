@@ -6,6 +6,8 @@ public class FiniteStateMachine
 {
     States _currentState;
 
+    public States CurrentState => _currentState;
+
     Dictionary<HunterStates, States> _allStates = new Dictionary<HunterStates, States>();
 
     public void AddState(HunterStates key, States state)
