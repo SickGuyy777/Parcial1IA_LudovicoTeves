@@ -16,6 +16,7 @@ public class IdleState : States
     public override void OnEnter()
     {
         _rend.material.color = Color.yellow;
+        Debug.Log("Entra IDLE");
     }
 
     public override void Update()

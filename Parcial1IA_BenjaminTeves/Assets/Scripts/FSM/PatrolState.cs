@@ -16,6 +16,7 @@ public class PatrolState : States
     public override void OnEnter()
     {
         _rend.material.color = Color.cyan;
+        Debug.Log("Entra Patrol");
     }
 
     public override void Update()
