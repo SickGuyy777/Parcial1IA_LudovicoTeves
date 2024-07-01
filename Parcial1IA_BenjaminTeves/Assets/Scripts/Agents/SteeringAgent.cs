@@ -6,6 +6,7 @@ public class SteeringAgent : MonoBehaviour
 {
     protected Vector3 _velocity;
 
+    public float initialSpeed;
     [SerializeField] protected float _maxSpeed;
     [SerializeField] protected float _maxForce;
 

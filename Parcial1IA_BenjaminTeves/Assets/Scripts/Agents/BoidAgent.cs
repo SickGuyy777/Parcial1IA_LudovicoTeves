@@ -19,6 +19,10 @@ public class BoidAgent : SteeringAgent
     public Transform fleeTarget;
 
     public float killDistance;
+    
+    public float respawnTime = 3;
+
+    MeshRenderer _renderer;
 
     private void Start()
     {
@@ -26,6 +30,7 @@ public class BoidAgent : SteeringAgent
         AddForce(randomDir.normalized * _maxSpeed);
         BoidManager.Instance.AddBoid(this);
         foodList = foodManager.foodList;
+        _renderer = GetComponent<MeshRenderer>();
     }
 
     private void Update()
@@ -43,13 +48,13 @@ public class BoidAgent : SteeringAgent
 
         if (distanciaHunter <= killDistance)
         {
-            gameObject.SetActive(false);
+            _renderer.enabled = false;
+            gameObject.transform.position = new Vector3(0, 0, 0);
+            _maxSpeed = 0;
+            StartCoroutine(ResetAfterTime(respawnTime));
         }
 
-        if (distanciaHunter <= viewRadius)
-        {
-            Evade();
-        }
+        if (distanciaHunter <= viewRadius) Evade();
 
         GameObject closestFood = null;
         float closestDistance = Mathf.Infinity;
@@ -65,9 +70,7 @@ public class BoidAgent : SteeringAgent
         }
 
         if (closestFood != null)
-        {
             AddForce(Arrive(closestFood.transform.position));
-        }
 
         if (closestFood != null && Vector3.Distance(transform.position, closestFood.transform.position) < 0.5)
         {
@@ -89,7 +92,7 @@ public class BoidAgent : SteeringAgent
         if (dist > arriveRadius) return Seek(targetPos);
 
         Vector3 desired = (targetPos - transform.position).normalized;
-        desired *= ((dist / arriveRadius) * _maxSpeed); //arriveRadius = 100% / dist
+        desired *= ((dist / arriveRadius) * _maxSpeed);
 
         Vector3 steering = Vector3.ClampMagnitude(desired - _velocity, _maxForce * 1.5f);
         return steering;
@@ -174,6 +177,13 @@ public class BoidAgent : SteeringAgent
     }
 
     public Vector3 MyVelocity() { return _velocity; }
+
+    private IEnumerator ResetAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        _renderer.enabled = true;
+        _maxSpeed = initialSpeed;
+    }
 
     private void OnDrawGizmos()
     {
