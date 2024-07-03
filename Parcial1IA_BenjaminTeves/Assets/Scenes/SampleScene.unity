@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 12822992}
   - component: {fileID: 12822991}
   - component: {fileID: 12822990}
+  - component: {fileID: 12822994}
   m_Layer: 6
   m_Name: Agente (71)
   m_TagString: Untagged
@@ -184,6 +185,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &12822991
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -247,6 +249,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12822988}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &12822994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12822988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &28417028
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +276,7 @@ GameObject:
   - component: {fileID: 28417032}
   - component: {fileID: 28417031}
   - component: {fileID: 28417030}
+  - component: {fileID: 28417034}
   m_Layer: 6
   m_Name: Agente (22)
   m_TagString: Untagged
@@ -308,6 +325,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &28417031
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -371,6 +389,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28417028}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &28417034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28417028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &42838040
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +416,7 @@ GameObject:
   - component: {fileID: 42838044}
   - component: {fileID: 42838043}
   - component: {fileID: 42838042}
+  - component: {fileID: 42838046}
   m_Layer: 6
   m_Name: Agente (61)
   m_TagString: Untagged
@@ -432,6 +465,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &42838043
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -495,6 +529,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42838040}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &42838046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42838040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &58739897
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +556,7 @@ GameObject:
   - component: {fileID: 58739901}
   - component: {fileID: 58739900}
   - component: {fileID: 58739899}
+  - component: {fileID: 58739903}
   m_Layer: 6
   m_Name: Agente (63)
   m_TagString: Untagged
@@ -556,6 +605,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &58739900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -619,6 +669,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58739897}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &58739903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58739897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &77321044
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +696,7 @@ GameObject:
   - component: {fileID: 77321048}
   - component: {fileID: 77321047}
   - component: {fileID: 77321046}
+  - component: {fileID: 77321050}
   m_Layer: 6
   m_Name: Agente (69)
   m_TagString: Untagged
@@ -680,6 +745,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &77321047
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -743,6 +809,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77321044}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &77321050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77321044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &79008611
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +836,7 @@ GameObject:
   - component: {fileID: 79008615}
   - component: {fileID: 79008614}
   - component: {fileID: 79008613}
+  - component: {fileID: 79008617}
   m_Layer: 6
   m_Name: Agente (55)
   m_TagString: Untagged
@@ -804,6 +885,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &79008614
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -867,6 +949,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79008611}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &79008617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79008611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &89638786
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +976,7 @@ GameObject:
   - component: {fileID: 89638790}
   - component: {fileID: 89638789}
   - component: {fileID: 89638788}
+  - component: {fileID: 89638792}
   m_Layer: 6
   m_Name: Agente (18)
   m_TagString: Untagged
@@ -928,6 +1025,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &89638789
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -991,6 +1089,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89638786}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &89638792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89638786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &94473469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1116,7 @@ GameObject:
   - component: {fileID: 94473473}
   - component: {fileID: 94473472}
   - component: {fileID: 94473471}
+  - component: {fileID: 94473475}
   m_Layer: 6
   m_Name: Agente (48)
   m_TagString: Untagged
@@ -1052,6 +1165,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &94473472
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1115,6 +1229,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94473469}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &94473475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94473469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &97659158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1256,7 @@ GameObject:
   - component: {fileID: 97659162}
   - component: {fileID: 97659161}
   - component: {fileID: 97659160}
+  - component: {fileID: 97659164}
   m_Layer: 6
   m_Name: Agente (40)
   m_TagString: Untagged
@@ -1176,6 +1305,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &97659161
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1239,6 +1369,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97659158}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &97659164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97659158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &108124812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1396,7 @@ GameObject:
   - component: {fileID: 108124816}
   - component: {fileID: 108124815}
   - component: {fileID: 108124814}
+  - component: {fileID: 108124818}
   m_Layer: 6
   m_Name: Agente (41)
   m_TagString: Untagged
@@ -1300,6 +1445,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &108124815
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1363,6 +1509,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108124812}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &108124818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108124812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &143338283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1536,7 @@ GameObject:
   - component: {fileID: 143338287}
   - component: {fileID: 143338286}
   - component: {fileID: 143338285}
+  - component: {fileID: 143338289}
   m_Layer: 6
   m_Name: Agente (19)
   m_TagString: Untagged
@@ -1424,6 +1585,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &143338286
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1487,6 +1649,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143338283}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &143338289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143338283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &151399381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1676,7 @@ GameObject:
   - component: {fileID: 151399385}
   - component: {fileID: 151399384}
   - component: {fileID: 151399383}
+  - component: {fileID: 151399387}
   m_Layer: 6
   m_Name: Agente (88)
   m_TagString: Untagged
@@ -1548,6 +1725,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &151399384
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1611,6 +1789,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151399381}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &151399387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151399381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &152651349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1816,7 @@ GameObject:
   - component: {fileID: 152651353}
   - component: {fileID: 152651352}
   - component: {fileID: 152651351}
+  - component: {fileID: 152651355}
   m_Layer: 6
   m_Name: Agente (21)
   m_TagString: Untagged
@@ -1672,6 +1865,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &152651352
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1735,6 +1929,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152651349}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &152651355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152651349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &162558026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1956,7 @@ GameObject:
   - component: {fileID: 162558030}
   - component: {fileID: 162558029}
   - component: {fileID: 162558028}
+  - component: {fileID: 162558032}
   m_Layer: 6
   m_Name: Agente (80)
   m_TagString: Untagged
@@ -1796,6 +2005,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &162558029
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1859,6 +2069,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162558026}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &162558032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162558026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &188496727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,6 +2193,7 @@ GameObject:
   - component: {fileID: 204509729}
   - component: {fileID: 204509728}
   - component: {fileID: 204509727}
+  - component: {fileID: 204509731}
   m_Layer: 6
   m_Name: Agente (25)
   m_TagString: Untagged
@@ -2017,6 +2242,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &204509728
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2080,6 +2306,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204509725}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &204509731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204509725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &283548594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2333,7 @@ GameObject:
   - component: {fileID: 283548598}
   - component: {fileID: 283548597}
   - component: {fileID: 283548596}
+  - component: {fileID: 283548600}
   m_Layer: 6
   m_Name: Agente (85)
   m_TagString: Untagged
@@ -2141,6 +2382,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &283548597
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2204,6 +2446,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283548594}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &283548600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283548594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &303374364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2473,7 @@ GameObject:
   - component: {fileID: 303374368}
   - component: {fileID: 303374367}
   - component: {fileID: 303374366}
+  - component: {fileID: 303374370}
   m_Layer: 6
   m_Name: Agente (34)
   m_TagString: Untagged
@@ -2265,6 +2522,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &303374367
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2328,6 +2586,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303374364}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &303374370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303374364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &322662743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2613,7 @@ GameObject:
   - component: {fileID: 322662747}
   - component: {fileID: 322662746}
   - component: {fileID: 322662745}
+  - component: {fileID: 322662749}
   m_Layer: 6
   m_Name: Agente (81)
   m_TagString: Untagged
@@ -2389,6 +2662,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &322662746
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2452,6 +2726,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322662743}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &322662749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322662743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &333736390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2753,7 @@ GameObject:
   - component: {fileID: 333736394}
   - component: {fileID: 333736393}
   - component: {fileID: 333736392}
+  - component: {fileID: 333736396}
   m_Layer: 6
   m_Name: Agente (87)
   m_TagString: Untagged
@@ -2513,6 +2802,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &333736393
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2576,6 +2866,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333736390}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &333736396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333736390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &383244261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2893,7 @@ GameObject:
   - component: {fileID: 383244265}
   - component: {fileID: 383244264}
   - component: {fileID: 383244263}
+  - component: {fileID: 383244267}
   m_Layer: 6
   m_Name: Agente (14)
   m_TagString: Untagged
@@ -2637,6 +2942,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &383244264
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2700,6 +3006,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383244261}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &383244267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383244261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &412922999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +3033,7 @@ GameObject:
   - component: {fileID: 412923003}
   - component: {fileID: 412923002}
   - component: {fileID: 412923001}
+  - component: {fileID: 412923005}
   m_Layer: 6
   m_Name: Agente (83)
   m_TagString: Untagged
@@ -2761,6 +3082,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &412923002
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2824,6 +3146,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412922999}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &412923005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412922999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &448858450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +3270,7 @@ GameObject:
   - component: {fileID: 473587128}
   - component: {fileID: 473587127}
   - component: {fileID: 473587126}
+  - component: {fileID: 473587130}
   m_Layer: 6
   m_Name: Agente (51)
   m_TagString: Untagged
@@ -2982,6 +3319,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &473587127
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3045,6 +3383,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473587124}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &473587130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473587124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &476681288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,6 +3410,7 @@ GameObject:
   - component: {fileID: 476681292}
   - component: {fileID: 476681291}
   - component: {fileID: 476681290}
+  - component: {fileID: 476681294}
   m_Layer: 6
   m_Name: Agente (65)
   m_TagString: Untagged
@@ -3106,6 +3459,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &476681291
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3169,6 +3523,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476681288}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &476681294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476681288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &496053981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,6 +3550,7 @@ GameObject:
   - component: {fileID: 496053984}
   - component: {fileID: 496053983}
   - component: {fileID: 496053987}
+  - component: {fileID: 496053988}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Untagged
@@ -3259,14 +3628,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496053981}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.09000015, y: 0, z: -9.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 970801814}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 991964712}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &496053987
 MonoBehaviour:
@@ -3298,6 +3667,20 @@ MonoBehaviour:
   _obstaclesLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &496053988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496053981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &511856177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3694,7 @@ GameObject:
   - component: {fileID: 511856181}
   - component: {fileID: 511856180}
   - component: {fileID: 511856179}
+  - component: {fileID: 511856183}
   m_Layer: 6
   m_Name: Agente (31)
   m_TagString: Untagged
@@ -3359,6 +3743,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &511856180
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3422,6 +3807,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511856177}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &511856183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511856177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &531396969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,6 +3931,7 @@ GameObject:
   - component: {fileID: 591049859}
   - component: {fileID: 591049858}
   - component: {fileID: 591049857}
+  - component: {fileID: 591049861}
   m_Layer: 6
   m_Name: Agente (76)
   m_TagString: Untagged
@@ -3580,6 +3980,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &591049858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3643,6 +4044,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591049855}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &591049861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591049855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &620303099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,6 +4071,7 @@ GameObject:
   - component: {fileID: 620303103}
   - component: {fileID: 620303102}
   - component: {fileID: 620303101}
+  - component: {fileID: 620303105}
   m_Layer: 6
   m_Name: Agente (24)
   m_TagString: Untagged
@@ -3704,6 +4120,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &620303102
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3767,6 +4184,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620303099}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &620303105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620303099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &631111575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,6 +4308,7 @@ GameObject:
   - component: {fileID: 632064065}
   - component: {fileID: 632064064}
   - component: {fileID: 632064063}
+  - component: {fileID: 632064067}
   m_Layer: 6
   m_Name: Agente (30)
   m_TagString: Untagged
@@ -3925,6 +4357,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &632064064
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3988,6 +4421,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632064061}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &632064067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632064061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &643128359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4001,6 +4448,7 @@ GameObject:
   - component: {fileID: 643128363}
   - component: {fileID: 643128362}
   - component: {fileID: 643128361}
+  - component: {fileID: 643128365}
   m_Layer: 6
   m_Name: Agente (57)
   m_TagString: Untagged
@@ -4049,6 +4497,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &643128362
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4112,6 +4561,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643128359}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &643128365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643128359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &647614073
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,6 +4588,7 @@ GameObject:
   - component: {fileID: 647614077}
   - component: {fileID: 647614076}
   - component: {fileID: 647614075}
+  - component: {fileID: 647614079}
   m_Layer: 6
   m_Name: Agente (35)
   m_TagString: Untagged
@@ -4173,6 +4637,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &647614076
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4236,6 +4701,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647614073}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &647614079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647614073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &660729872
 GameObject:
   m_ObjectHideFlags: 0
@@ -4249,6 +4728,7 @@ GameObject:
   - component: {fileID: 660729876}
   - component: {fileID: 660729875}
   - component: {fileID: 660729874}
+  - component: {fileID: 660729878}
   m_Layer: 6
   m_Name: Agente (28)
   m_TagString: Untagged
@@ -4297,6 +4777,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &660729875
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4360,6 +4841,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660729872}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &660729878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660729872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &675439654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4868,7 @@ GameObject:
   - component: {fileID: 675439658}
   - component: {fileID: 675439657}
   - component: {fileID: 675439656}
+  - component: {fileID: 675439660}
   m_Layer: 6
   m_Name: Agente (13)
   m_TagString: Untagged
@@ -4421,6 +4917,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &675439657
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4484,6 +4981,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675439654}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &675439660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675439654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &679887608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,6 +5008,7 @@ GameObject:
   - component: {fileID: 679887612}
   - component: {fileID: 679887611}
   - component: {fileID: 679887610}
+  - component: {fileID: 679887614}
   m_Layer: 6
   m_Name: Agente (84)
   m_TagString: Untagged
@@ -4545,6 +5057,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &679887611
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4608,6 +5121,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679887608}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &679887614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679887608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &688038709
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,6 +5148,7 @@ GameObject:
   - component: {fileID: 688038713}
   - component: {fileID: 688038712}
   - component: {fileID: 688038711}
+  - component: {fileID: 688038715}
   m_Layer: 6
   m_Name: Agente (77)
   m_TagString: Untagged
@@ -4669,6 +5197,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &688038712
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4732,6 +5261,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688038709}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &688038715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688038709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,6 +5382,7 @@ GameObject:
   - component: {fileID: 723435791}
   - component: {fileID: 723435790}
   - component: {fileID: 723435789}
+  - component: {fileID: 723435793}
   m_Layer: 6
   m_Name: Agente (27)
   m_TagString: Untagged
@@ -4887,6 +5431,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &723435790
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4950,6 +5495,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723435787}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &723435793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723435787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &728625294
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +5522,7 @@ GameObject:
   - component: {fileID: 728625298}
   - component: {fileID: 728625297}
   - component: {fileID: 728625296}
+  - component: {fileID: 728625300}
   m_Layer: 6
   m_Name: Agente (2)
   m_TagString: Untagged
@@ -5011,6 +5571,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &728625297
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5074,6 +5635,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728625294}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &728625300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728625294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &763854336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,6 +5662,7 @@ GameObject:
   - component: {fileID: 763854340}
   - component: {fileID: 763854339}
   - component: {fileID: 763854338}
+  - component: {fileID: 763854342}
   m_Layer: 6
   m_Name: Agente (15)
   m_TagString: Untagged
@@ -5135,6 +5711,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &763854339
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5198,6 +5775,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763854336}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &763854342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763854336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &770628662
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5802,7 @@ GameObject:
   - component: {fileID: 770628666}
   - component: {fileID: 770628665}
   - component: {fileID: 770628668}
+  - component: {fileID: 770628669}
   m_Layer: 6
   m_Name: Agente
   m_TagString: Untagged
@@ -5322,6 +5914,21 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
+--- !u!114 &770628669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770628662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &772659459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,6 +6039,7 @@ GameObject:
   - component: {fileID: 778572019}
   - component: {fileID: 778572018}
   - component: {fileID: 778572017}
+  - component: {fileID: 778572021}
   m_Layer: 6
   m_Name: Agente (59)
   m_TagString: Untagged
@@ -5480,6 +6088,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &778572018
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5543,6 +6152,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778572015}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &778572021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778572015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &797733923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,6 +6179,7 @@ GameObject:
   - component: {fileID: 797733927}
   - component: {fileID: 797733926}
   - component: {fileID: 797733925}
+  - component: {fileID: 797733929}
   m_Layer: 6
   m_Name: Agente (60)
   m_TagString: Untagged
@@ -5604,6 +6228,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &797733926
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5667,6 +6292,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797733923}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &797733929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797733923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &814629560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,6 +6319,7 @@ GameObject:
   - component: {fileID: 814629564}
   - component: {fileID: 814629563}
   - component: {fileID: 814629562}
+  - component: {fileID: 814629566}
   m_Layer: 6
   m_Name: Agente (72)
   m_TagString: Untagged
@@ -5728,6 +6368,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &814629563
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5791,6 +6432,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814629560}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &814629566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814629560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &865245654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6653,7 @@ GameObject:
   - component: {fileID: 876412639}
   - component: {fileID: 876412638}
   - component: {fileID: 876412637}
+  - component: {fileID: 876412641}
   m_Layer: 6
   m_Name: Agente (52)
   m_TagString: Untagged
@@ -6046,6 +6702,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &876412638
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6109,6 +6766,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876412635}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &876412641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876412635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &925128458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,6 +6793,7 @@ GameObject:
   - component: {fileID: 925128462}
   - component: {fileID: 925128461}
   - component: {fileID: 925128460}
+  - component: {fileID: 925128464}
   m_Layer: 6
   m_Name: Agente (82)
   m_TagString: Untagged
@@ -6170,6 +6842,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &925128461
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6233,6 +6906,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925128458}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &925128464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925128458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6330,6 +7017,7 @@ GameObject:
   - component: {fileID: 964499395}
   - component: {fileID: 964499394}
   - component: {fileID: 964499393}
+  - component: {fileID: 964499397}
   m_Layer: 6
   m_Name: Agente (39)
   m_TagString: Untagged
@@ -6378,6 +7066,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &964499394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6441,6 +7130,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964499391}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &964499397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964499391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &970801813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,6 +7241,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970801813}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &991964710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 991964712}
+  - component: {fileID: 991964711}
+  m_Layer: 0
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &991964711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991964710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b449a4e44df8c45a45d0ed3aa10146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: -40
+  z: -21.4
+  cellWidth: 10
+  cellHeight: 5.35
+  width: 8
+  height: 8
+  AreGizmosShutDown: 1
+  activatedGrid: 1
+  showLogs: 1
+--- !u!4 &991964712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991964710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1312357196}
+  - {fileID: 496053986}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047891192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,6 +7309,7 @@ GameObject:
   - component: {fileID: 1047891196}
   - component: {fileID: 1047891195}
   - component: {fileID: 1047891194}
+  - component: {fileID: 1047891198}
   m_Layer: 6
   m_Name: Agente (4)
   m_TagString: Untagged
@@ -6599,6 +7358,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1047891195
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6662,6 +7422,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047891192}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1047891198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047891192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1090022151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6675,6 +7449,7 @@ GameObject:
   - component: {fileID: 1090022155}
   - component: {fileID: 1090022154}
   - component: {fileID: 1090022153}
+  - component: {fileID: 1090022157}
   m_Layer: 6
   m_Name: Agente (44)
   m_TagString: Untagged
@@ -6723,6 +7498,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1090022154
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6786,6 +7562,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090022151}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1090022157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090022151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1106090040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,6 +7686,7 @@ GameObject:
   - component: {fileID: 1161738361}
   - component: {fileID: 1161738360}
   - component: {fileID: 1161738359}
+  - component: {fileID: 1161738363}
   m_Layer: 6
   m_Name: Agente (75)
   m_TagString: Untagged
@@ -6944,6 +7735,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1161738360
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7007,6 +7799,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161738357}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1161738363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161738357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1177743017
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,6 +7826,7 @@ GameObject:
   - component: {fileID: 1177743021}
   - component: {fileID: 1177743020}
   - component: {fileID: 1177743019}
+  - component: {fileID: 1177743023}
   m_Layer: 6
   m_Name: Agente (66)
   m_TagString: Untagged
@@ -7068,6 +7875,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1177743020
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7131,6 +7939,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177743017}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1177743023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177743017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1178786557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,6 +7966,7 @@ GameObject:
   - component: {fileID: 1178786561}
   - component: {fileID: 1178786560}
   - component: {fileID: 1178786559}
+  - component: {fileID: 1178786563}
   m_Layer: 6
   m_Name: Agente (68)
   m_TagString: Untagged
@@ -7192,6 +8015,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1178786560
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7255,6 +8079,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178786557}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1178786563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178786557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1179057585
 GameObject:
   m_ObjectHideFlags: 0
@@ -7268,6 +8106,7 @@ GameObject:
   - component: {fileID: 1179057589}
   - component: {fileID: 1179057588}
   - component: {fileID: 1179057587}
+  - component: {fileID: 1179057591}
   m_Layer: 6
   m_Name: Agente (33)
   m_TagString: Untagged
@@ -7316,6 +8155,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1179057588
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7379,6 +8219,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179057585}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1179057591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179057585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1184347988
 GameObject:
   m_ObjectHideFlags: 0
@@ -7489,6 +8343,7 @@ GameObject:
   - component: {fileID: 1186927255}
   - component: {fileID: 1186927254}
   - component: {fileID: 1186927253}
+  - component: {fileID: 1186927257}
   m_Layer: 6
   m_Name: Agente (17)
   m_TagString: Untagged
@@ -7537,6 +8392,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1186927254
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7600,6 +8456,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186927251}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1186927257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186927251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1189187415
 GameObject:
   m_ObjectHideFlags: 0
@@ -7613,6 +8483,7 @@ GameObject:
   - component: {fileID: 1189187419}
   - component: {fileID: 1189187418}
   - component: {fileID: 1189187417}
+  - component: {fileID: 1189187421}
   m_Layer: 6
   m_Name: Agente (73)
   m_TagString: Untagged
@@ -7661,6 +8532,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1189187418
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7724,6 +8596,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189187415}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1189187421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189187415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1228394680
 GameObject:
   m_ObjectHideFlags: 0
@@ -7737,6 +8623,7 @@ GameObject:
   - component: {fileID: 1228394684}
   - component: {fileID: 1228394683}
   - component: {fileID: 1228394682}
+  - component: {fileID: 1228394686}
   m_Layer: 6
   m_Name: Agente (45)
   m_TagString: Untagged
@@ -7785,6 +8672,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1228394683
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7848,6 +8736,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228394680}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1228394686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228394680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1232597113
 GameObject:
   m_ObjectHideFlags: 0
@@ -7861,6 +8763,7 @@ GameObject:
   - component: {fileID: 1232597117}
   - component: {fileID: 1232597116}
   - component: {fileID: 1232597115}
+  - component: {fileID: 1232597119}
   m_Layer: 6
   m_Name: Agente (58)
   m_TagString: Untagged
@@ -7909,6 +8812,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1232597116
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7972,6 +8876,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232597113}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1232597119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232597113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1270392320
 GameObject:
   m_ObjectHideFlags: 0
@@ -7985,6 +8903,7 @@ GameObject:
   - component: {fileID: 1270392324}
   - component: {fileID: 1270392323}
   - component: {fileID: 1270392322}
+  - component: {fileID: 1270392326}
   m_Layer: 6
   m_Name: Agente (47)
   m_TagString: Untagged
@@ -8033,6 +8952,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1270392323
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8096,6 +9016,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270392320}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1270392326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270392320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1277964298
 GameObject:
   m_ObjectHideFlags: 0
@@ -8109,6 +9043,7 @@ GameObject:
   - component: {fileID: 1277964302}
   - component: {fileID: 1277964301}
   - component: {fileID: 1277964300}
+  - component: {fileID: 1277964304}
   m_Layer: 6
   m_Name: Agente (64)
   m_TagString: Untagged
@@ -8157,6 +9092,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1277964301
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8220,6 +9156,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277964298}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1277964304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277964298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1278996302
 GameObject:
   m_ObjectHideFlags: 0
@@ -8233,6 +9183,7 @@ GameObject:
   - component: {fileID: 1278996306}
   - component: {fileID: 1278996305}
   - component: {fileID: 1278996304}
+  - component: {fileID: 1278996308}
   m_Layer: 6
   m_Name: Agente (10)
   m_TagString: Untagged
@@ -8281,6 +9232,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1278996305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8344,6 +9296,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278996302}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1278996308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278996302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1310496225
 GameObject:
   m_ObjectHideFlags: 0
@@ -8386,7 +9352,7 @@ Transform:
   - {fileID: 865245655}
   - {fileID: 1357628911}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312357195
 GameObject:
@@ -8411,7 +9377,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312357195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8506,8 +9472,8 @@ Transform:
   - {fileID: 333736391}
   - {fileID: 151399382}
   - {fileID: 1543719320}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 991964712}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316904382
 GameObject:
@@ -8522,6 +9488,7 @@ GameObject:
   - component: {fileID: 1316904386}
   - component: {fileID: 1316904385}
   - component: {fileID: 1316904384}
+  - component: {fileID: 1316904388}
   m_Layer: 6
   m_Name: Agente (43)
   m_TagString: Untagged
@@ -8570,6 +9537,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1316904385
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8633,6 +9601,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316904382}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1316904388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316904382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1321891565
 GameObject:
   m_ObjectHideFlags: 0
@@ -8646,6 +9628,7 @@ GameObject:
   - component: {fileID: 1321891569}
   - component: {fileID: 1321891568}
   - component: {fileID: 1321891567}
+  - component: {fileID: 1321891571}
   m_Layer: 6
   m_Name: Agente (70)
   m_TagString: Untagged
@@ -8694,6 +9677,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1321891568
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8757,6 +9741,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321891565}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1321891571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321891565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1336406366
 GameObject:
   m_ObjectHideFlags: 0
@@ -8964,6 +9962,7 @@ GameObject:
   - component: {fileID: 1377217994}
   - component: {fileID: 1377217993}
   - component: {fileID: 1377217992}
+  - component: {fileID: 1377217996}
   m_Layer: 6
   m_Name: Agente (62)
   m_TagString: Untagged
@@ -9012,6 +10011,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1377217993
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9075,6 +10075,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377217990}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1377217996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377217990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1412987752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9088,6 +10102,7 @@ GameObject:
   - component: {fileID: 1412987756}
   - component: {fileID: 1412987755}
   - component: {fileID: 1412987754}
+  - component: {fileID: 1412987758}
   m_Layer: 6
   m_Name: Agente (50)
   m_TagString: Untagged
@@ -9136,6 +10151,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1412987755
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9199,6 +10215,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412987752}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1412987758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412987752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1425424972
 GameObject:
   m_ObjectHideFlags: 0
@@ -9212,6 +10242,7 @@ GameObject:
   - component: {fileID: 1425424976}
   - component: {fileID: 1425424975}
   - component: {fileID: 1425424974}
+  - component: {fileID: 1425424978}
   m_Layer: 6
   m_Name: Agente (29)
   m_TagString: Untagged
@@ -9260,6 +10291,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1425424975
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9323,6 +10355,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425424972}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1425424978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425424972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1437346158
 GameObject:
   m_ObjectHideFlags: 0
@@ -9627,6 +10673,7 @@ GameObject:
   - component: {fileID: 1454930651}
   - component: {fileID: 1454930650}
   - component: {fileID: 1454930649}
+  - component: {fileID: 1454930653}
   m_Layer: 6
   m_Name: Agente (49)
   m_TagString: Untagged
@@ -9675,6 +10722,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1454930650
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9738,6 +10786,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454930647}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1454930653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454930647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1458138515
 GameObject:
   m_ObjectHideFlags: 0
@@ -9782,7 +10844,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458515721
 GameObject:
@@ -9797,6 +10859,7 @@ GameObject:
   - component: {fileID: 1458515725}
   - component: {fileID: 1458515724}
   - component: {fileID: 1458515723}
+  - component: {fileID: 1458515727}
   m_Layer: 6
   m_Name: Agente (86)
   m_TagString: Untagged
@@ -9845,6 +10908,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1458515724
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9908,6 +10972,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458515721}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1458515727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458515721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1467175998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9921,6 +10999,7 @@ GameObject:
   - component: {fileID: 1467176002}
   - component: {fileID: 1467176001}
   - component: {fileID: 1467176000}
+  - component: {fileID: 1467176004}
   m_Layer: 6
   m_Name: Agente (5)
   m_TagString: Untagged
@@ -9969,6 +11048,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1467176001
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10032,6 +11112,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467175998}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1467176004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467175998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1476204254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10045,6 +11139,7 @@ GameObject:
   - component: {fileID: 1476204258}
   - component: {fileID: 1476204257}
   - component: {fileID: 1476204256}
+  - component: {fileID: 1476204260}
   m_Layer: 6
   m_Name: Agente (1)
   m_TagString: Untagged
@@ -10093,6 +11188,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1476204257
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10156,6 +11252,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476204254}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1476204260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476204254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1497102861
 GameObject:
   m_ObjectHideFlags: 0
@@ -10185,10 +11295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32a52b66b5a9e418bac6846feef7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 5047352426952979829, guid: 5edddeffe7d37f445b64f64879c40e7e, type: 3}
-  agents: {fileID: 0}
-  foodList: []
-  cantidad: 15
 --- !u!4 &1497102863
 Transform:
   m_ObjectHideFlags: 0
@@ -10202,7 +11308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532134960
 GameObject:
@@ -10217,6 +11323,7 @@ GameObject:
   - component: {fileID: 1532134964}
   - component: {fileID: 1532134963}
   - component: {fileID: 1532134962}
+  - component: {fileID: 1532134966}
   m_Layer: 6
   m_Name: Agente (67)
   m_TagString: Untagged
@@ -10265,6 +11372,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1532134963
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10328,6 +11436,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532134960}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1532134966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532134960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1543719319
 GameObject:
   m_ObjectHideFlags: 0
@@ -10341,6 +11463,7 @@ GameObject:
   - component: {fileID: 1543719323}
   - component: {fileID: 1543719322}
   - component: {fileID: 1543719321}
+  - component: {fileID: 1543719325}
   m_Layer: 6
   m_Name: Agente (89)
   m_TagString: Untagged
@@ -10389,6 +11512,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1543719322
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10452,6 +11576,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543719319}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1543719325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543719319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1548511012
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,6 +11603,7 @@ GameObject:
   - component: {fileID: 1548511016}
   - component: {fileID: 1548511015}
   - component: {fileID: 1548511014}
+  - component: {fileID: 1548511018}
   m_Layer: 6
   m_Name: Agente (46)
   m_TagString: Untagged
@@ -10513,6 +11652,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1548511015
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10576,6 +11716,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548511012}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1548511018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548511012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1569995181
 GameObject:
   m_ObjectHideFlags: 0
@@ -10784,6 +11938,7 @@ GameObject:
   - component: {fileID: 1643894680}
   - component: {fileID: 1643894679}
   - component: {fileID: 1643894678}
+  - component: {fileID: 1643894682}
   m_Layer: 6
   m_Name: Agente (78)
   m_TagString: Untagged
@@ -10832,6 +11987,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1643894679
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10895,6 +12051,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643894676}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1643894682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643894676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1669787687
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,6 +12078,7 @@ GameObject:
   - component: {fileID: 1669787691}
   - component: {fileID: 1669787690}
   - component: {fileID: 1669787689}
+  - component: {fileID: 1669787693}
   m_Layer: 6
   m_Name: Agente (37)
   m_TagString: Untagged
@@ -10956,6 +12127,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1669787690
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11019,6 +12191,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669787687}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1669787693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669787687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1685812443
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,6 +12218,7 @@ GameObject:
   - component: {fileID: 1685812447}
   - component: {fileID: 1685812446}
   - component: {fileID: 1685812445}
+  - component: {fileID: 1685812449}
   m_Layer: 6
   m_Name: Agente (11)
   m_TagString: Untagged
@@ -11080,6 +12267,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1685812446
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11143,6 +12331,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685812443}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1685812449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685812443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1696326471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11156,6 +12358,7 @@ GameObject:
   - component: {fileID: 1696326475}
   - component: {fileID: 1696326474}
   - component: {fileID: 1696326473}
+  - component: {fileID: 1696326477}
   m_Layer: 6
   m_Name: Agente (20)
   m_TagString: Untagged
@@ -11204,6 +12407,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1696326474
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11267,6 +12471,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696326471}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1696326477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696326471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1705194623
 GameObject:
   m_ObjectHideFlags: 0
@@ -11280,6 +12498,7 @@ GameObject:
   - component: {fileID: 1705194627}
   - component: {fileID: 1705194626}
   - component: {fileID: 1705194625}
+  - component: {fileID: 1705194629}
   m_Layer: 6
   m_Name: Agente (8)
   m_TagString: Untagged
@@ -11328,6 +12547,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1705194626
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11391,6 +12611,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705194623}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1705194629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705194623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1707331168
 GameObject:
   m_ObjectHideFlags: 0
@@ -11424,7 +12658,7 @@ Transform:
   - {fileID: 531396970}
   - {fileID: 772659460}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759284565
 GameObject:
@@ -11536,6 +12770,7 @@ GameObject:
   - component: {fileID: 1781684537}
   - component: {fileID: 1781684536}
   - component: {fileID: 1781684535}
+  - component: {fileID: 1781684539}
   m_Layer: 6
   m_Name: Agente (26)
   m_TagString: Untagged
@@ -11584,6 +12819,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1781684536
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11647,6 +12883,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781684533}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1781684539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781684533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1781795234
 GameObject:
   m_ObjectHideFlags: 0
@@ -11660,6 +12910,7 @@ GameObject:
   - component: {fileID: 1781795238}
   - component: {fileID: 1781795237}
   - component: {fileID: 1781795236}
+  - component: {fileID: 1781795240}
   m_Layer: 6
   m_Name: Agente (56)
   m_TagString: Untagged
@@ -11708,6 +12959,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1781795237
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11771,6 +13023,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781795234}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1781795240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781795234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1787784364
 GameObject:
   m_ObjectHideFlags: 0
@@ -11784,6 +13050,7 @@ GameObject:
   - component: {fileID: 1787784368}
   - component: {fileID: 1787784367}
   - component: {fileID: 1787784366}
+  - component: {fileID: 1787784370}
   m_Layer: 6
   m_Name: Agente (7)
   m_TagString: Untagged
@@ -11832,6 +13099,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1787784367
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11895,6 +13163,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787784364}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1787784370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787784364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1806430820
 GameObject:
   m_ObjectHideFlags: 0
@@ -11908,6 +13190,7 @@ GameObject:
   - component: {fileID: 1806430824}
   - component: {fileID: 1806430823}
   - component: {fileID: 1806430822}
+  - component: {fileID: 1806430826}
   m_Layer: 6
   m_Name: Agente (38)
   m_TagString: Untagged
@@ -11956,6 +13239,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1806430823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12019,6 +13303,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806430820}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1806430826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806430820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1907652114
 GameObject:
   m_ObjectHideFlags: 0
@@ -12032,6 +13330,7 @@ GameObject:
   - component: {fileID: 1907652118}
   - component: {fileID: 1907652117}
   - component: {fileID: 1907652116}
+  - component: {fileID: 1907652120}
   m_Layer: 6
   m_Name: Agente (42)
   m_TagString: Untagged
@@ -12080,6 +13379,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1907652117
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12143,6 +13443,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907652114}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1907652120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907652114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1922720758
 GameObject:
   m_ObjectHideFlags: 0
@@ -12156,6 +13470,7 @@ GameObject:
   - component: {fileID: 1922720762}
   - component: {fileID: 1922720761}
   - component: {fileID: 1922720760}
+  - component: {fileID: 1922720764}
   m_Layer: 6
   m_Name: Agente (12)
   m_TagString: Untagged
@@ -12204,6 +13519,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1922720761
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12267,6 +13583,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922720758}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1922720764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922720758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1924616116
 GameObject:
   m_ObjectHideFlags: 0
@@ -12280,6 +13610,7 @@ GameObject:
   - component: {fileID: 1924616120}
   - component: {fileID: 1924616119}
   - component: {fileID: 1924616118}
+  - component: {fileID: 1924616122}
   m_Layer: 6
   m_Name: Agente (54)
   m_TagString: Untagged
@@ -12328,6 +13659,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1924616119
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12391,6 +13723,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924616116}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1924616122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924616116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1925343649
 GameObject:
   m_ObjectHideFlags: 0
@@ -12404,6 +13750,7 @@ GameObject:
   - component: {fileID: 1925343653}
   - component: {fileID: 1925343652}
   - component: {fileID: 1925343651}
+  - component: {fileID: 1925343655}
   m_Layer: 6
   m_Name: Agente (6)
   m_TagString: Untagged
@@ -12452,6 +13799,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1925343652
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12515,6 +13863,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925343649}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1925343655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925343649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1962037767
 GameObject:
   m_ObjectHideFlags: 0
@@ -12528,6 +13890,7 @@ GameObject:
   - component: {fileID: 1962037771}
   - component: {fileID: 1962037770}
   - component: {fileID: 1962037769}
+  - component: {fileID: 1962037773}
   m_Layer: 6
   m_Name: Agente (79)
   m_TagString: Untagged
@@ -12576,6 +13939,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1962037770
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12639,6 +14003,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962037767}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1962037773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962037767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &1988144286
 GameObject:
   m_ObjectHideFlags: 0
@@ -12652,6 +14030,7 @@ GameObject:
   - component: {fileID: 1988144290}
   - component: {fileID: 1988144289}
   - component: {fileID: 1988144288}
+  - component: {fileID: 1988144292}
   m_Layer: 6
   m_Name: Agente (32)
   m_TagString: Untagged
@@ -12700,6 +14079,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &1988144289
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12763,6 +14143,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988144286}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1988144292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988144286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2005467096
 GameObject:
   m_ObjectHideFlags: 0
@@ -12776,6 +14170,7 @@ GameObject:
   - component: {fileID: 2005467100}
   - component: {fileID: 2005467099}
   - component: {fileID: 2005467098}
+  - component: {fileID: 2005467102}
   m_Layer: 6
   m_Name: Agente (36)
   m_TagString: Untagged
@@ -12824,6 +14219,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2005467099
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12887,6 +14283,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005467096}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2005467102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005467096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2024519664
 GameObject:
   m_ObjectHideFlags: 0
@@ -12900,6 +14310,7 @@ GameObject:
   - component: {fileID: 2024519668}
   - component: {fileID: 2024519667}
   - component: {fileID: 2024519666}
+  - component: {fileID: 2024519670}
   m_Layer: 6
   m_Name: Agente (9)
   m_TagString: Untagged
@@ -12948,6 +14359,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2024519667
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13011,6 +14423,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024519664}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2024519670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024519664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2041743862
 GameObject:
   m_ObjectHideFlags: 0
@@ -13024,6 +14450,7 @@ GameObject:
   - component: {fileID: 2041743866}
   - component: {fileID: 2041743865}
   - component: {fileID: 2041743864}
+  - component: {fileID: 2041743868}
   m_Layer: 6
   m_Name: Agente (23)
   m_TagString: Untagged
@@ -13072,6 +14499,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2041743865
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13135,6 +14563,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041743862}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2041743868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041743862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2059829297
 GameObject:
   m_ObjectHideFlags: 0
@@ -13148,6 +14590,7 @@ GameObject:
   - component: {fileID: 2059829301}
   - component: {fileID: 2059829300}
   - component: {fileID: 2059829299}
+  - component: {fileID: 2059829303}
   m_Layer: 6
   m_Name: Agente (74)
   m_TagString: Untagged
@@ -13196,6 +14639,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2059829300
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13259,6 +14703,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059829297}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2059829303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059829297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2063040828
 GameObject:
   m_ObjectHideFlags: 0
@@ -13369,6 +14827,7 @@ GameObject:
   - component: {fileID: 2080686300}
   - component: {fileID: 2080686299}
   - component: {fileID: 2080686298}
+  - component: {fileID: 2080686302}
   m_Layer: 6
   m_Name: Agente (16)
   m_TagString: Untagged
@@ -13417,6 +14876,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2080686299
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13480,6 +14940,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080686296}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2080686302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080686296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2114949537
 GameObject:
   m_ObjectHideFlags: 0
@@ -13493,6 +14967,7 @@ GameObject:
   - component: {fileID: 2114949541}
   - component: {fileID: 2114949540}
   - component: {fileID: 2114949539}
+  - component: {fileID: 2114949543}
   m_Layer: 6
   m_Name: Agente (53)
   m_TagString: Untagged
@@ -13541,6 +15016,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2114949540
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13604,6 +15080,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114949537}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2114949543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114949537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
 --- !u!1 &2122751516
 GameObject:
   m_ObjectHideFlags: 0
@@ -13617,6 +15107,7 @@ GameObject:
   - component: {fileID: 2122751520}
   - component: {fileID: 2122751519}
   - component: {fileID: 2122751518}
+  - component: {fileID: 2122751522}
   m_Layer: 6
   m_Name: Agente (3)
   m_TagString: Untagged
@@ -13665,6 +15156,7 @@ MonoBehaviour:
   foodManager: {fileID: 1497102862}
   fleeTarget: {fileID: 496053986}
   killDistance: 1.01
+  respawnTime: 3
 --- !u!135 &2122751519
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13728,3 +15220,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122751516}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2122751522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122751516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49b2b6d50c7a749bea4d8294713dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  onGrid: 0
