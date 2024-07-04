@@ -42,6 +42,7 @@ public class BoidAgent : SteeringAgent
         transform.position = BoidManager.Instance.BoundChecks(transform.position);
         //Flocking();
         NewFlocking();
+        
 
         Vector3 obstacleForce = ObstacleAvoidance();
         Vector3 force = obstacleForce == Vector3.zero ? CalculateSteering(transform.forward * _maxSpeed) : obstacleForce;
