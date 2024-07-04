@@ -21,18 +21,14 @@ public class PatrolState : States
 
     public override void Update()
     {
-        _hunter.AddForce(_hunter.ObstacleAvoidance());
+        //_hunter.AddForce(_hunter.ObstacleAvoidance());
         Patrol();
 
         if (_hunter.stamine <= 0)
-        {
             fsm.ChangeState(HunterStates.Idle);
-        }
 
         if (_hunter.CHECKAGENT == true && _hunter.stamine >= 0)
-        {
             fsm.ChangeState(HunterStates.Chase);
-        }
     }
 
     public void Patrol()
@@ -40,14 +36,10 @@ public class PatrolState : States
         _hunter.AddForce(_hunter.Seek(_hunter.waypoints[_hunter.currentWay].position));
 
         if (Vector3.Distance(_hunter.waypoints[_hunter.currentWay].position, _hunter.transform.position) <= _hunter.wayRadius)
-        {
             _hunter.currentWay++;
-        }
 
         if (_hunter.currentWay >= _hunter.waypoints.Length)
-        {
             _hunter.currentWay = 0;
-        }
 
         _hunter.transform.position += _hunter.VELOCITY * Time.deltaTime;
         _hunter.transform.right = _hunter.VELOCITY;
@@ -55,6 +47,5 @@ public class PatrolState : States
     }
 
     public override void OnExit()
-    {
-    }
+    { }
 }

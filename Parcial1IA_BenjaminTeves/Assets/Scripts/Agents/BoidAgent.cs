@@ -52,10 +52,7 @@ public class BoidAgent : SteeringAgent
 
         if (distanciaHunter <= killDistance)
         {
-            _renderer.enabled = false;
-            gameObject.transform.position = new Vector3(0, 0, 0);
-            _maxSpeed = 0;
-            StartCoroutine(ResetAfterTime(respawnTime));
+            BoidManager.Instance.RemoveBoid(this);
         }
 
         if (distanciaHunter <= viewRadius) Evade();
@@ -121,6 +118,14 @@ public class BoidAgent : SteeringAgent
         else return desired;
 
         return CalculateSteering(desired.normalized * _maxSpeed);
+    }
+
+    public void Death()
+    {
+        gameObject.SetActive(false);
+        gameObject.transform.position = new Vector3(0, 0, 0);
+        _maxSpeed = 0;
+        BoidManager.Instance.StartCoroutine(ResetAfterTime(respawnTime));
     }
 
     #region old flocking
@@ -249,8 +254,9 @@ public class BoidAgent : SteeringAgent
     private IEnumerator ResetAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        _renderer.enabled = true;
+        gameObject.SetActive(true);
         _maxSpeed = initialSpeed;
+        BoidManager.Instance.AddBoid(this);
     }
 
     public IEnumerable<GridEntity> Query()

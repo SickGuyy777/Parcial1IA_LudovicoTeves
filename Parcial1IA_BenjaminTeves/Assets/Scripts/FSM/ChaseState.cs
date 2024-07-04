@@ -25,33 +25,36 @@ public class ChaseState : States
     
         if (_hunter.CHECKAGENT == false && _hunter.stamine > 0)
             fsm.ChangeState(HunterStates.Patrol);
-        _hunter.AddForce(Persuit());
+        _hunter.AddForce(PersuitSeek());
+        _hunter.transform.position += _hunter.VELOCITY * Time.deltaTime;
+        _hunter.transform.right = _hunter.VELOCITY;
     }
-    
-    Vector3 Persuit()
+
+    Vector3 PersuitSeek()
     {
         Vector3 dir = _hunter.transform.position;
         dir.y = 1.124f;
         Vector3 desired = Vector3.zero;
         desired *= _hunter.MAXSPEED;
         desired.Normalize();
-    
+
         _hunter.stamine -= 1 * Time.deltaTime;
+
+        BoidAgent minBoid = null;
+        float minDist = 99999;
         foreach (var agents in BoidManager.Instance.allBoids)
         {
             Vector3 distBoids = agents.transform.position - _hunter.transform.position;
-            if (distBoids.magnitude <= _hunter.viewRadius)
+            if (distBoids.magnitude <= _hunter.viewRadius && distBoids.magnitude < minDist)
             {
-                Vector3 futurePos = agents.transform.position + agents.MyVelocity() * Time.deltaTime;
-                desired = futurePos - _hunter.transform.position;
-                _hunter.transform.position += desired * Time.deltaTime;
+                minDist = distBoids.magnitude;
+                minBoid = agents;
             }
         }
-        //_hunter.transform.right = _hunter.VELOCITY;
 
-        return _hunter.Seek(desired);
+        return _hunter.Seek(minBoid.transform.position);
     }
-    
+
     public override void OnExit()
     { }
 }

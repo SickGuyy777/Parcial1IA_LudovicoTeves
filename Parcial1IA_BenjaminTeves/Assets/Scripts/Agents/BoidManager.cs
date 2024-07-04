@@ -34,6 +34,15 @@ public class BoidManager : MonoBehaviour
             allBoids.Add(b);
     }
 
+    public void RemoveBoid(BoidAgent b)
+    {
+        if (allBoids.Contains(b))
+        {
+            allBoids.Remove(b);
+            b.Death();
+        }
+    }
+
     public void AddHunt(Hunter h)
     {
         if (!myHunt.Contains(h))
