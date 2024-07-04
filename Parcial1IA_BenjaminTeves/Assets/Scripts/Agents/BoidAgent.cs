@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BoidAgent : SteeringAgent
 {
+    [SerializeField] SpatialGrid _targetGrid;
+    [SerializeField] float _radius;
+
     public float separationRadius;
     public float viewRadius;
 
@@ -86,6 +90,14 @@ public class BoidAgent : SteeringAgent
         AddForce(Cohesion(BoidManager.Instance.allBoids));
     }
 
+    void NewFlocking()
+    {
+        var entities = Query().ToList();
+        AddForce(SeparationNew(entities));
+        AddForce(AlignmentNew(entities));
+        AddForce(CohesionNew(entities));
+    }
+
     Vector3 Arrive(Vector3 targetPos)
     {
         float dist = Vector3.Distance(targetPos, transform.position);
@@ -111,6 +123,7 @@ public class BoidAgent : SteeringAgent
         return CalculateSteering(desired.normalized * _maxSpeed);
     }
 
+    #region old flocking
     Vector3 Alignment(HashSet<BoidAgent> boids)
     {
         Vector3 desired = Vector3.zero;
@@ -161,6 +174,61 @@ public class BoidAgent : SteeringAgent
 
         return CalculateSteering(desired);
     }
+    #endregion
+
+    #region new flocking
+
+    Vector3 SeparationNew(IEnumerable<GridEntity> entities)
+    {
+        Vector3 desired = Vector3.zero;
+        foreach (var item in entities)
+        {
+            if (item == this || Vector3.Distance(item.transform.position, transform.position) > separationRadius) continue;
+            desired += item.transform.position - transform.position;
+        }
+        if (desired == Vector3.zero) return desired;
+        desired = -desired.normalized * _maxSpeed;
+
+        return CalculateSteering(desired);
+    }
+
+    Vector3 AlignmentNew(IEnumerable<GridEntity> entities)
+    {
+        Vector3 desired = Vector3.zero;
+        int count = 0;
+        foreach (var item in entities)
+        {
+            if (Vector3.Distance(item.transform.position, transform.position) <= viewRadius)
+            {
+                //desired += item._velocity;
+                count++;
+            }
+        }
+        desired /= count;
+
+        return CalculateSteering(desired.normalized * _maxSpeed);
+    }
+
+    Vector3 CohesionNew(IEnumerable<GridEntity> entities)
+    {
+        Vector3 desiredPos = Vector3.zero;
+        int count = 0;
+        foreach (var item in entities)
+        {
+            if (item != this) continue;
+
+            if (Vector3.Distance(item.transform.position, transform.position) <= viewRadius)
+            {
+                desiredPos += item.transform.position;
+                count++;
+            }
+        }
+        if (count == 0) return Vector3.zero;
+        desiredPos /= count;
+
+        return Seek(desiredPos);
+    }
+    #endregion
 
     void Evade()
     {
@@ -185,10 +253,26 @@ public class BoidAgent : SteeringAgent
         _maxSpeed = initialSpeed;
     }
 
+    public IEnumerable<GridEntity> Query()
+    {
+        //creo una "caja" con las dimensiones deseadas, y luego filtro segun distancia para formar el círculo
+        return _targetGrid.Query(
+            transform.position + new Vector3(-_radius, 0, -_radius),
+            transform.position + new Vector3(_radius, 0, _radius),
+            x => {
+                var position2d = x - transform.position;
+                position2d.y = 0;
+                return position2d.sqrMagnitude < _radius * _radius;
+            });
+    }
+
     private void OnDrawGizmos()
     {
         Vector3 origin1 = transform.position + transform.right / 4;
         Vector3 origin2 = transform.position - transform.right / 4;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _radius);
 
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, separationRadius);
