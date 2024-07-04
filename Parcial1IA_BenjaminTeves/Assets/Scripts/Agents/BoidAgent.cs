@@ -40,7 +40,8 @@ public class BoidAgent : SteeringAgent
     private void Update()
     {
         transform.position = BoidManager.Instance.BoundChecks(transform.position);
-        Flocking();
+        //Flocking();
+        NewFlocking();
 
         Vector3 obstacleForce = ObstacleAvoidance();
         Vector3 force = obstacleForce == Vector3.zero ? CalculateSteering(transform.forward * _maxSpeed) : obstacleForce;
@@ -90,7 +91,7 @@ public class BoidAgent : SteeringAgent
     void NewFlocking()
     {
         var entities = Query().ToList();
-        AddForce(SeparationNew(entities));
+        AddForce(SeparationNew(entities) * _separationWeight);
         AddForce(AlignmentNew(entities));
         AddForce(CohesionNew(entities));
     }
@@ -127,7 +128,7 @@ public class BoidAgent : SteeringAgent
         _maxSpeed = 0;
         BoidManager.Instance.StartCoroutine(ResetAfterTime(respawnTime));
     }
-
+    
     #region old flocking
     Vector3 Alignment(HashSet<BoidAgent> boids)
     {
@@ -180,7 +181,7 @@ public class BoidAgent : SteeringAgent
         return CalculateSteering(desired);
     }
     #endregion
-
+    
     #region new flocking
 
     Vector3 SeparationNew(IEnumerable<GridEntity> entities)
@@ -205,7 +206,7 @@ public class BoidAgent : SteeringAgent
         {
             if (Vector3.Distance(item.transform.position, transform.position) <= viewRadius)
             {
-                //desired += item._velocity;
+                desired += _velocity;
                 count++;
             }
         }
