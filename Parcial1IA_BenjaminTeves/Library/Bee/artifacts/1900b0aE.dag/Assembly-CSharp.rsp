@@ -359,13 +359,19 @@
 "Assets/ClaseGrid/Grid/Queries.cs"
 "Assets/ClaseGrid/Grid/SpatialGrid.cs"
 "Assets/ClaseGrid/Utility.cs"
+"Assets/Scripts/Agents/BoidAgent.cs"
+"Assets/Scripts/Agents/BoidManager.cs"
+"Assets/Scripts/Agents/SteeringAgent.cs"
 "Assets/Scripts/Boids/Boid.cs"
 "Assets/Scripts/Food.cs"
 "Assets/Scripts/FoodSpawner.cs"
+"Assets/Scripts/FSM/ChaseState.cs"
 "Assets/Scripts/FSM/FiniteStateMachine.cs"
+"Assets/Scripts/FSM/IdleState.cs"
+"Assets/Scripts/FSM/PatrolState.cs"
 "Assets/Scripts/FSM/States.cs"
 "Assets/Scripts/GameManager.cs"
-"Assets/Scripts/Hunter1.cs"
+"Assets/Scripts/Hunter.cs"
 -langversion:9.0
 
 /deterministic

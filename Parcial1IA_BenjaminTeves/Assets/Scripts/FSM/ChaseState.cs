@@ -5,24 +5,24 @@ public class ChaseState : States
 {
     Hunter _hunter;
     Renderer _rend;
-    
+
     public ChaseState(Hunter hunter)
     {
         _hunter = hunter;
         _rend = _hunter.GetComponent<Renderer>();
     }
-    
+
     public override void OnEnter()
     {
         _rend.material.color = Color.red;
         Debug.Log("Entra Chase");
     }
-    
+
     public override void Update()
     {
         if (_hunter.stamine <= 0)
             fsm.ChangeState(HunterStates.Idle);
-    
+
         if (_hunter.CHECKAGENT == false && _hunter.stamine > 0)
             fsm.ChangeState(HunterStates.Patrol);
         _hunter.AddForce(PersuitSeek());
